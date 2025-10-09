@@ -1,4 +1,4 @@
-# Listelee.io - Comprehensive Features Documentation 🚀
+# listelee.lumiostudio.co - Comprehensive Features Documentation 🚀
 
 *Landing Page Builder for Turkish Entrepreneurs*
 
@@ -698,7 +698,7 @@ interface SuccessStory {
 
 ---
 
-*Bu özellik seti ile Listelee.io, Türk girişimciler için en kapsamlı ve etkili landing page platformu haline gelecek! 🚀*
+*Bu özellik seti ile listelee.lumiostudio.co, Türk girişimciler için en kapsamlı ve etkili landing page platformu haline gelecek! 🚀*
 
 **Last Updated**: December 2024
 **Version**: 2.0

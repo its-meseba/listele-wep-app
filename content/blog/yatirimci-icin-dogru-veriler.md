@@ -5,8 +5,8 @@ excerpt: "Yatırımcıları etkilemek için hangi verileri toplamalısınız? Fi
 category: "Startup"
 tags: ["yatırımcı sunumu", "startup metrics", "finansman", "pitch deck", "veri analizi", "startup funding"]
 author:
-  name: "Listelee.io"
-  email: "info@listelee.io"
+  name: "listelee.lumiostudio.co"
+  email: "info@listelee.lumiostudio.co"
 publishedAt: "2025-07-29T10:00:00Z"
 readingTime: 12
 seo:
@@ -420,6 +420,6 @@ Yatırımcılarla olan ilişkinizde:
 
 ---
 
-**Yatırımcı sunum sürecinize hazır mısınız?** [Listelee.io](/) ile **açılış sayfanızdan (landing page)** başlayarak ilk traction verilerinizi toplamaya başlayın!
+**Yatırımcı sunum sürecinize hazır mısınız?** [listelee.lumiostudio.co](/) ile **açılış sayfanızdan (landing page)** başlayarak ilk traction verilerinizi toplamaya başlayın!
 
 *Bu rehber startup'ınızın finansman sürecine katkı sağladıysa, diğer girişimcilerle paylaşmayı unutmayın! 💼* 

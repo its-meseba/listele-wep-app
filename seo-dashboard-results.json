@@ -1,0 +1,195 @@
+{
+  "generatedAt": "2025-10-09T03:30:17.770Z",
+  "dashboard": {
+    "overview": {
+      "overallScore": 66,
+      "trafficProjection": 677,
+      "backlinkHealth": 80,
+      "contentQuality": 45
+    },
+    "keyMetrics": {
+      "currentTraffic": 2500,
+      "targetTraffic": 15000,
+      "backlinks": 4,
+      "domainAuthority": 80,
+      "contentPieces": 13,
+      "socialFollowers": 3150
+    },
+    "priorityActions": [
+      "🚨 Fix critical SEO errors (missing meta tags, sitemap, etc.)",
+      "📝 Improve content quality and SEO optimization",
+      "📄 Create more high-quality blog content (aim for 20+ articles)",
+      "🔗 Build high-quality backlinks from authoritative sites",
+      "🌐 Increase domain diversity in backlink profile",
+      "🎯 Optimize for target keywords in top content",
+      "📊 Set up Google Analytics and Search Console tracking",
+      "📱 Improve mobile page speed and Core Web Vitals"
+    ],
+    "monthlyGoals": [
+      {
+        "month": 1,
+        "goals": [
+          "Fix all critical SEO issues",
+          "Publish 5 new blog posts",
+          "Secure 10 new backlinks",
+          "Set up social media posting schedule"
+        ],
+        "metrics": {
+          "traffic": "+25%",
+          "backlinks": "+15",
+          "content": "+5 articles",
+          "social": "+500 followers"
+        }
+      },
+      {
+        "month": 2,
+        "goals": [
+          "Achieve 80+ SEO score",
+          "Rank for 3 primary keywords",
+          "Launch influencer collaboration program",
+          "Optimize content for featured snippets"
+        ],
+        "metrics": {
+          "traffic": "+40%",
+          "backlinks": "+20",
+          "keywords": "3 in top 10",
+          "engagement": "+50%"
+        }
+      },
+      {
+        "month": 3,
+        "goals": [
+          "Reach 10,000 monthly visitors",
+          "Build backlink profile of 50+ links",
+          "Establish thought leadership content",
+          "Launch paid social campaigns"
+        ],
+        "metrics": {
+          "traffic": "+60%",
+          "backlinks": "+30",
+          "domainAuthority": "+10",
+          "conversions": "+25%"
+        }
+      }
+    ],
+    "progressTracking": [
+      {
+        "category": "Technical SEO",
+        "current": 65,
+        "target": 95,
+        "completed": [
+          "Meta tags optimized",
+          "XML sitemap created"
+        ],
+        "pending": [
+          "Schema markup",
+          "Page speed optimization",
+          "Mobile optimization"
+        ]
+      },
+      {
+        "category": "Content Marketing",
+        "current": 45,
+        "target": 85,
+        "completed": [
+          "Blog structure created",
+          "3 articles published"
+        ],
+        "pending": [
+          "Keyword optimization",
+          "Content calendar",
+          "Internal linking"
+        ]
+      },
+      {
+        "category": "Backlink Building",
+        "current": 30,
+        "target": 75,
+        "completed": [
+          "Competitor analysis"
+        ],
+        "pending": [
+          "Outreach campaign",
+          "Guest posting",
+          "Influencer partnerships"
+        ]
+      },
+      {
+        "category": "Social Media",
+        "current": 20,
+        "target": 70,
+        "completed": [
+          "Strategy defined"
+        ],
+        "pending": [
+          "Content calendar",
+          "Posting schedule",
+          "Engagement tracking"
+        ]
+      }
+    ]
+  },
+  "insights": {
+    "strengths": [
+      "Strong Turkish market focus",
+      "Clear value proposition",
+      "Growing content library",
+      "Technical foundation in place"
+    ],
+    "weaknesses": [
+      "Limited backlink profile",
+      "Content quantity needs expansion",
+      "Social media presence underdeveloped",
+      "Keyword optimization incomplete"
+    ],
+    "opportunities": [
+      "Turkish startup ecosystem growth",
+      "Increasing demand for no-code tools",
+      "SEO opportunity in long-tail keywords",
+      "Partnership potential with incubators"
+    ],
+    "threats": [
+      "High competition in SaaS market",
+      "Google algorithm updates",
+      "Economic uncertainty affecting startups",
+      "New competitors entering market"
+    ]
+  },
+  "recommendations": {
+    "immediate": [
+      "Complete technical SEO audit fixes",
+      "Create content calendar for next 3 months",
+      "Start backlink building campaign",
+      "Set up social media automation"
+    ],
+    "shortTerm": [
+      "Publish 15+ optimized blog posts",
+      "Secure 50+ quality backlinks",
+      "Build social media following to 3000+",
+      "Rank for 10+ target keywords"
+    ],
+    "longTerm": [
+      "Achieve 25,000+ monthly organic traffic",
+      "Establish domain authority of 50+",
+      "Become recognized leader in Turkish SaaS SEO",
+      "Generate 40%+ of revenue from organic traffic"
+    ]
+  },
+  "kpis": {
+    "monthly": [
+      "Organic traffic growth",
+      "Keyword ranking improvements",
+      "Backlink acquisition",
+      "Content publication rate",
+      "Social media engagement",
+      "Domain authority score"
+    ],
+    "quarterly": [
+      "Conversion rate from organic traffic",
+      "Revenue from organic sources",
+      "Brand awareness metrics",
+      "Customer acquisition cost",
+      "Content quality score"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
-# Listelee.io – Latest Features Overview
+# listelee.lumiostudio.co – Latest Features Overview
 
-Welcome to **Listelee.io** – the launchpad that turns raw startup ideas into thriving ventures. Below is a concise overview of the current feature-set as of **July 2025**.
+Welcome to **listelee.lumiostudio.co** – the launchpad that turns raw startup ideas into thriving ventures. Below is a concise overview of the current feature-set as of **July 2025**.
 
 ---
 

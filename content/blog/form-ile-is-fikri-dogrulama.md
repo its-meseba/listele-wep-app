@@ -5,8 +5,8 @@ excerpt: "Zaman ve kaynağınızı boşa harcamayın! İş fikrinizi geliştirme
 category: "Girişimcilik"
 tags: ["iş fikri doğrulama", "mvp", "müşteri geri bildirimi", "startup", "form", "landing page"]
 author:
-  name: "Listelee.io"
-  email: "info@listelee.io"
+  name: "listelee.lumiostudio.co"
+  email: "info@listelee.lumiostudio.co"
 publishedAt: "2025-07-15T10:00:00Z"
 readingTime: 8
 seo:
@@ -119,7 +119,7 @@ Arkadaşlarınız size "hayır" demekte zorlanır. Gerçek müşterilerle test e
 ## 🛠️ Araçlar ve Platformlar
 
 ### **Hızlı Başlangıç İçin:**
-- **Listelee.io**: Özelleştirilmiş açılış sayfası (landing page) + form
+- **listelee.lumiostudio.co**: Özelleştirilmiş açılış sayfası (landing page) + form
 - **Typeform**: Etkileşimli formlar
 - **Google Forms**: Basit ve ücretsiz
 
@@ -145,6 +145,6 @@ Form ile doğrulama, girişimciliğin en değerli araçlarından biridir. Büyü
 
 ---
 
-**Hemen başlamak ister misiniz?** [Listelee.io](/) ile dakikalar içinde profesyonel bir doğrulama formu oluşturun ve iş fikrinizin gerçek potansiyelini keşfedin!
+**Hemen başlamak ister misiniz?** [listelee.lumiostudio.co](/) ile dakikalar içinde profesyonel bir doğrulama formu oluşturun ve iş fikrinizin gerçek potansiyelini keşfedin!
 
 *Bu makale faydalı olduysa, sosyal medyada paylaşmayı unutmayın! 🚀* 

@@ -5,18 +5,15 @@ import { Button } from "~/components/ui/button";
 import { CheckCircle2, XCircle, Clock } from "lucide-react";
 import Link from "next/link";
 import { cn } from "~/lib/utils";
-import { tiers } from "~/lib/plans";
+import { tiers, getPlanBySlug } from "~/lib/plans";
 import { useState, useEffect } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { auth } from "~/lib/firebase";
 import { toast } from "sonner";
 import AuthForm from "~/components/auth-form";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "~/components/ui/dialog";
-import { loadStripe } from '@stripe/stripe-js';
 import { isPaymentEnabled } from "~/lib/config";
 import { StructuredData, pricingPageSchema } from "~/components/structured-data";
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 const freePlan = tiers[0];
 const paidPlans = tiers.slice(1);
@@ -47,31 +44,15 @@ export default function PricingPage() {
             setShowAuthModal(true);
         } else {
             try {
-                const token = await user.getIdToken();
-                const res = await fetch('/api/stripe/checkout', {
-                    method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    },
-                    body: JSON.stringify({
-                        planId: slug,
-                        success_url: `${window.location.origin}/payment-success`,
-                        cancel_url: `${window.location.origin}/payment-fail`,
-                    })
-                });
-                
-                if (!res.ok) {
-                    throw new Error('Payment service temporarily unavailable');
+                const plan = getPlanBySlug(slug);
+                if (!plan || !plan.polarProductId) {
+                    toast.error('Geçersiz plan seçildi.');
+                    return;
                 }
-                
-                const data = await res.json();
-                if (data.sessionId) {
-                    const stripe = await stripePromise;
-                    await stripe?.redirectToCheckout({ sessionId: data.sessionId });
-                } else {
-                    toast.error(data.error || 'Could not create payment link.');
-                }
+
+                // Redirect to Polar checkout
+                const checkoutUrl = `/api/polar/checkout?products=${plan.polarProductId}&customer_email=${user.email}`;
+                window.location.href = checkoutUrl;
             } catch (error) {
                 console.error('Payment error:', error);
                 toast.error('Ödeme sistemi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.');
@@ -92,12 +73,12 @@ export default function PricingPage() {
             Özellikler & Planlar
           </h2>
           <p className="mt-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            {paymentEnabled ? "Size Uygun Planı Keşfedin" : "Tüm Özellikleri Keşfedin"}
+            {paymentEnabled ? "Lifetime Planları Keşfedin" : "Tüm Özellikleri Keşfedin"}
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
-            {paymentEnabled 
-              ? "Her plan özel olarak tasarlanmış güçlü özelliklerle geliyor. İhtiyaçlarınıza en uygun olanı seçin." 
-              : "Listelee.io'nun sunduğu tüm özellikleri görün. Fiyatlandırma yakında aktif olacak."
+            {paymentEnabled
+              ? "Bir kez ödeyin, ömür boyu kullanın. Her plan güçlü özelliklerle tasarlandı ve proje limitleriniz var."
+              : "listelee.lumiostudio.co'nun sunduğu tüm özellikleri görün. Fiyatlandırma yakında aktif olacak."
             }
           </p>
           {!paymentEnabled && (
@@ -137,6 +118,9 @@ export default function PricingPage() {
                   <span className="text-4xl font-bold tracking-tight text-green-900 dark:text-green-100">
                     {freePlan.price}
                   </span>
+                  <span className="text-sm font-semibold text-green-700 dark:text-green-200">
+                    /Lifetime
+                  </span>
                 </p>
               )}
               <div className="mt-8">
@@ -169,9 +153,9 @@ export default function PricingPage() {
               transition={{ duration: 0.6, delay: planIdx * 0.1 }}
               className={cn(
                 "rounded-3xl p-8 xl:p-10 relative shadow-xl transform hover:scale-105 transition-all duration-300",
-                plan.slug === 'pro' 
-                  ? "bg-gradient-to-br from-blue-600 to-purple-700 text-white ring-4 ring-blue-300 dark:ring-blue-500 lg:scale-105" 
-                  : plan.slug === 'basic'
+                plan.slug === 'professional'
+                  ? "bg-gradient-to-br from-blue-600 to-purple-700 text-white ring-4 ring-blue-300 dark:ring-blue-500 lg:scale-105"
+                  : plan.slug === 'starter'
                   ? "bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950 dark:to-yellow-950 ring-2 ring-orange-200 dark:ring-orange-700"
                   : "bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 ring-2 ring-purple-200 dark:ring-purple-700"
               )}
@@ -189,14 +173,14 @@ export default function PricingPage() {
                 <h3
                   className={cn(
                     "text-2xl font-bold leading-8",
-                    plan.slug === 'pro' ? "text-white" : 
-                    plan.slug === 'basic' ? "text-orange-900 dark:text-orange-100" :
+                    plan.slug === 'professional' ? "text-white" :
+                    plan.slug === 'starter' ? "text-orange-900 dark:text-orange-100" :
                     "text-purple-900 dark:text-purple-100"
                   )}
                 >
                   {plan.name}
                 </h3>
-                {plan.slug === 'pro' && (
+                {plan.slug === 'professional' && (
                   <div className="bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold border border-white/30">
                     ⭐ Önerilen
                   </div>
@@ -205,13 +189,13 @@ export default function PricingPage() {
               
               <p className={cn(
                 "text-base leading-6 font-medium mb-6",
-                plan.slug === 'pro' ? "text-blue-100" :
-                plan.slug === 'basic' ? "text-orange-700 dark:text-orange-200" :
+                plan.slug === 'professional' ? "text-blue-100" :
+                plan.slug === 'starter' ? "text-orange-700 dark:text-orange-200" :
                 "text-purple-700 dark:text-purple-200"
               )}>
-                {plan.slug === 'basic' && "Büyümeye hazır olanlar için güçlü araçlar"}
-                {plan.slug === 'pro' && "Profesyoneller için tam özellikli çözüm"}
-                {plan.slug === 'unlimited' && "Sınırsız güç ve kontrolle zirveyi hedefleyin"}
+                {plan.slug === 'starter' && "Başlangıç seviyesinde güçlü araçlar"}
+                {plan.slug === 'professional' && "Profesyoneller için tam özellikli çözüm"}
+                {plan.slug === 'enterprise' && "Kurumsal düzeyde gelişmiş özellikler"}
               </p>
 
               {paymentEnabled && (
@@ -219,19 +203,19 @@ export default function PricingPage() {
                   <p className="flex items-baseline gap-x-2">
                     <span className={cn(
                       "text-4xl font-bold tracking-tight",
-                      plan.slug === 'pro' ? "text-white" :
-                      plan.slug === 'basic' ? "text-orange-900 dark:text-orange-100" :
+                      plan.slug === 'professional' ? "text-white" :
+                      plan.slug === 'starter' ? "text-orange-900 dark:text-orange-100" :
                       "text-purple-900 dark:text-purple-100"
                     )}>
                       {plan.price}
                     </span>
                     <span className={cn(
                       "text-sm font-semibold",
-                      plan.slug === 'pro' ? "text-blue-200" :
-                      plan.slug === 'basic' ? "text-orange-600 dark:text-orange-300" :
+                      plan.slug === 'professional' ? "text-blue-200" :
+                      plan.slug === 'starter' ? "text-orange-600 dark:text-orange-300" :
                       "text-purple-600 dark:text-purple-300"
                     )}>
-                      /ay
+                      /Lifetime
                     </span>
                   </p>
                 </div>
@@ -240,8 +224,8 @@ export default function PricingPage() {
               <div>
                 <h4 className={cn(
                   "text-sm font-bold uppercase tracking-wide mb-4",
-                  plan.slug === 'pro' ? "text-blue-200" :
-                  plan.slug === 'basic' ? "text-orange-800 dark:text-orange-200" :
+                  plan.slug === 'professional' ? "text-blue-200" :
+                  plan.slug === 'starter' ? "text-orange-800 dark:text-orange-200" :
                   "text-purple-800 dark:text-purple-200"
                 )}>
                   Bu Planda Neler Var?
@@ -251,14 +235,14 @@ export default function PricingPage() {
                     <li key={feature} className="flex gap-x-3">
                       <CheckCircle2 className={cn(
                         "h-6 w-6 flex-none",
-                        plan.slug === 'pro' ? "text-green-300" :
-                        plan.slug === 'basic' ? "text-orange-600 dark:text-orange-400" :
+                        plan.slug === 'professional' ? "text-green-300" :
+                        plan.slug === 'starter' ? "text-orange-600 dark:text-orange-400" :
                         "text-purple-600 dark:text-purple-400"
                       )} />
                       <span className={cn(
                         "text-base font-medium",
-                        plan.slug === 'pro' ? "text-white" :
-                        plan.slug === 'basic' ? "text-orange-900 dark:text-orange-100" :
+                        plan.slug === 'professional' ? "text-white" :
+                        plan.slug === 'starter' ? "text-orange-900 dark:text-orange-100" :
                         "text-purple-900 dark:text-purple-100"
                       )}>
                         {feature}
@@ -274,9 +258,9 @@ export default function PricingPage() {
                   disabled={!paymentEnabled}
                   className={cn(
                     "w-full font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl",
-                    plan.slug === 'pro' 
-                      ? "bg-white text-blue-600 hover:bg-blue-50 border-2 border-white" 
-                      : plan.slug === 'basic'
+                    plan.slug === 'professional'
+                      ? "bg-white text-blue-600 hover:bg-blue-50 border-2 border-white"
+                      : plan.slug === 'starter'
                       ? "bg-orange-600 text-white hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600"
                       : "bg-purple-600 text-white hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600",
                     !paymentEnabled && "!bg-gray-400 !text-gray-600 cursor-not-allowed !opacity-70"

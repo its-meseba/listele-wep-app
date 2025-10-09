@@ -11,24 +11,24 @@ import { APP_URL } from '~/lib/config';
 const CATEGORY_INFO = {
   'e-commerce': {
     title: 'E-Ticaret Projeleri',
-    description: 'Listelee.io ile oluşturulmuş başarılı e-ticaret projelerini keşfet. Online mağaza, ürün satış sayfaları ve e-ticaret başlangıç projelerinden ilham al.',
+    description: 'listelee.lumiostudio.co ile oluşturulmuş başarılı e-ticaret projelerini keşfet. Online mağaza, ürün satış sayfaları ve e-ticaret başlangıç projelerinden ilham al.',
     keywords: 'e-ticaret landing page, online mağaza sayfası, ürün satış sayfası, e-ticaret startup, online satış projesi',
     emoji: '🛒',
-    longDescription: 'E-ticaret dünyasına adım atmak mı istiyorsun? Burada Listelee.io ile hayata geçirilmiş onlarca başarılı e-ticaret projesini bulabilirsin. Online mağazalardan ürün satış sayfalarına, marketplace fikirlerinden niş e-ticaret projelerine kadar geniş bir yelpazede ilham alabilir, kendi projen için fikirler edinebilirsin.'
+    longDescription: 'E-ticaret dünyasına adım atmak mı istiyorsun? Burada listelee.lumiostudio.co ile hayata geçirilmiş onlarca başarılı e-ticaret projesini bulabilirsin. Online mağazalardan ürün satış sayfalarına, marketplace fikirlerinden niş e-ticaret projelerine kadar geniş bir yelpazede ilham alabilir, kendi projen için fikirler edinebilirsin.'
   },
   'saas': {
     title: 'SaaS Projeleri',
     description: 'Yazılım hizmeti (SaaS) projelerinin en başarılı örnekleri. B2B araçlar, SaaS ürünler ve yazılım çözümleri için landing page örnekleri.',
     keywords: 'saas landing page, yazılım hizmeti sayfası, b2b araç sayfası, saas startup, yazılım proje sayfası',
     emoji: '💻',
-    longDescription: 'SaaS (Software as a Service) dünyası sürekli büyüyen ve gelişen bir alan. Burada Listelee.io ile oluşturulmuş yazılım hizmetleri, B2B araçları, iş otomasyonu çözümleri ve SaaS ürünlerinin landing page örneklerini bulabilirsin. Kendi yazılım fikrin için müşteri validation yapma sürecinden ilham al.'
+    longDescription: 'SaaS (Software as a Service) dünyası sürekli büyüyen ve gelişen bir alan. Burada listelee.lumiostudio.co ile oluşturulmuş yazılım hizmetleri, B2B araçları, iş otomasyonu çözümleri ve SaaS ürünlerinin landing page örneklerini bulabilirsin. Kendi yazılım fikrin için müşteri validation yapma sürecinden ilham al.'
   },
   'local-business': {
     title: 'Yerel İşletme Projeleri',
     description: 'Yerel işletmeler için oluşturulmuş dijital pazarlama projeleri. Restoran, kuaför, cafe ve diğer yerel hizmetler için örnek sayfalar.',
     keywords: 'yerel işletme sayfası, restoran web sitesi, kuaför sayfası, cafe landing page, yerel hizmet sayfası',
     emoji: '🏪',
-    longDescription: 'Yerel işletmeler dijital dünyada var olmak için güçlü bir online varlığa ihtiyaç duyuyor. Bu kategoride restoranlardan kuaförlere, cafelerden spor salonlarına kadar çeşitli yerel işletmelerin Listelee.io ile oluşturdukları dijital vitrinleri keşfedebilirsin.'
+    longDescription: 'Yerel işletmeler dijital dünyada var olmak için güçlü bir online varlığa ihtiyaç duyuyor. Bu kategoride restoranlardan kuaförlere, cafelerden spor salonlarına kadar çeşitli yerel işletmelerin listelee.lumiostudio.co ile oluşturdukları dijital vitrinleri keşfedebilirsin.'
   },
   'consulting': {
     title: 'Danışmanlık Projeleri',
@@ -93,30 +93,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!categoryInfo) {
     return {
-      title: 'Kategori Bulunamadı - Listelee.io',
+      title: 'Kategori Bulunamadı - listelee.lumiostudio.co',
       description: 'Aradığınız kategori bulunamadı. Tüm proje kategorilerini keşfetmek için ana sayfaya dönün.',
     };
   }
 
   return {
-    title: `${categoryInfo.title} | Listelee.io Proje Galerisi`,
+    title: `${categoryInfo.title} | listelee.lumiostudio.co Proje Galerisi`,
     description: categoryInfo.description,
     keywords: categoryInfo.keywords,
     alternates: {
       canonical: `/kategori/${category}`,
     },
     openGraph: {
-      title: `${categoryInfo.title} | Listelee.io`,
+      title: `${categoryInfo.title} | listelee.lumiostudio.co`,
       description: categoryInfo.description,
       url: `${APP_URL}/kategori/${category}`,
-      siteName: 'Listelee.io',
+      siteName: 'listelee.lumiostudio.co',
       images: [`${APP_URL}/opengraph-image.png`],
       locale: 'tr_TR',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${categoryInfo.title} | Listelee.io`,
+      title: `${categoryInfo.title} | listelee.lumiostudio.co`,
       description: categoryInfo.description,
       images: [`${APP_URL}/twitter-image.png`],
     },
@@ -161,7 +161,7 @@ export default async function CategoryPage({ params }: Props) {
     "url": `${APP_URL}/kategori/${category}`,
     "isPartOf": {
       "@type": "WebSite",
-      "name": "Listelee.io",
+      "name": "listelee.lumiostudio.co",
       "url": APP_URL
     },
     "breadcrumb": {
@@ -349,7 +349,7 @@ export default async function CategoryPage({ params }: Props) {
                 {categoryInfo.title} kategorisinde sen de var ol!
               </h3>
               <p className="text-black/80 mb-6 max-w-2xl mx-auto">
-                Listelee.io ile kendi {category} projenizi oluşturun, müşteri toplayın ve sektörünüzde fark yaratın.
+                listelee.lumiostudio.co ile kendi {category} projenizi oluşturun, müşteri toplayın ve sektörünüzde fark yaratın.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/onboarding">

@@ -1,7 +1,7 @@
 import { APP_URL } from './config'
 
 export const siteConfig = {
-  name: "Listelee.io",
+  name: "listelee.lumiostudio.co",
   description: "Girişimciler için bekleme listesi platformu. Fikrini lansmandan önce doğrula, müşterilerini topla ve ürünü güvenle inşa et.",
   shortDescription: "Bekleme listesiyle fikrini lansmandan önce doğrula.",
   keywords: [
@@ -29,9 +29,9 @@ export const siteConfig = {
     "yapay zeka proje asistanı",
     "startup validasyon"
   ],
-  authors: [{ name: "Listelee.io Team", url: APP_URL }],
-  creator: "Listelee.io",
-  publisher: "Listelee.io",
+  authors: [{ name: "listelee.lumiostudio.co Team", url: APP_URL }],
+  creator: "listelee.lumiostudio.co",
+  publisher: "listelee.lumiostudio.co",
   formatDetection: {
     email: false,
     address: false,
@@ -52,22 +52,22 @@ export const siteConfig = {
     type: "website",
     locale: "tr_TR",
     url: APP_URL,
-    title: "Listelee.io - Bekleme Listeni Hızla Oluştur",
+    title: "listelee.lumiostudio.co - Bekleme Listeni Hızla Oluştur",
     description: "Girişimciler için bekleme listesi platformu. Fikrini lansmandan önce doğrula, müşterilerini topla ve ürünü güvenle inşa et.",
-    siteName: "Listelee.io",
+    siteName: "listelee.lumiostudio.co",
     images: [
       {
         url: `${APP_URL}/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: "Listelee.io - AI-Powered Project Landing Page Generator",
+        alt: "listelee.lumiostudio.co - AI-Powered Project Landing Page Generator",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Listelee.io - Bekleme Listeni Hızla Oluştur",
+    title: "listelee.lumiostudio.co - Bekleme Listeni Hızla Oluştur",
     description: "Girişimciler için bekleme listesi platformu. Fikrini lansmandan önce doğrula, müşterilerini topla ve ürünü güvenle inşa et.",
     images: [`${APP_URL}/twitter-image.png`],
     creator: "@listeleio",
@@ -90,7 +90,7 @@ export const siteConfig = {
 export const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Listelee.io",
+  "name": "listelee.lumiostudio.co",
   "description": siteConfig.description,
   "url": APP_URL,
   "logo": `${APP_URL}/Logo.png`,
@@ -98,7 +98,7 @@ export const organizationStructuredData = {
   "founders": [
     {
       "@type": "Person",
-      "name": "Listelee.io Kurucu Ekibi"
+      "name": "listelee.lumiostudio.co Kurucu Ekibi"
     }
   ],
   "sameAs": [
@@ -116,7 +116,7 @@ export const organizationStructuredData = {
 export const softwareApplicationStructuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Listelee.io",
+  "name": "listelee.lumiostudio.co",
   "description": siteConfig.description,
   "url": APP_URL,
   "applicationCategory": "BusinessApplication",
@@ -136,12 +136,12 @@ export const softwareApplicationStructuredData = {
   },
   "author": {
     "@type": "Organization",
-    "name": "Listelee.io",
+    "name": "listelee.lumiostudio.co",
     "url": APP_URL
   },
   "publisher": {
     "@type": "Organization", 
-    "name": "Listelee.io",
+    "name": "listelee.lumiostudio.co",
     "url": APP_URL
   },
   "screenshot": `${APP_URL}/demo.png`,
@@ -159,13 +159,13 @@ export const softwareApplicationStructuredData = {
 export const websiteStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Listelee.io",
+  "name": "listelee.lumiostudio.co",
   "description": siteConfig.description,
   "url": APP_URL,
   "inLanguage": "tr",
   "publisher": {
     "@type": "Organization",
-    "name": "Listelee.io",
+    "name": "listelee.lumiostudio.co",
     "url": APP_URL
   },
   "potentialAction": {
@@ -214,22 +214,22 @@ export const createPageMetadata = (
 export const pageMetadata = {
   pricing: createPageMetadata(
     "Fiyatlandırma",
-    "Listelee.io fiyat planları. Ücretsiz başla, ihtiyacına göre büyüt. Girişimciler için uygun fiyatlı landing page çözümleri.",
+    "listelee.lumiostudio.co fiyat planları. Ücretsiz başla, ihtiyacına göre büyüt. Girişimciler için uygun fiyatlı landing page çözümleri.",
     "/pricing"
   ),
   showcase: createPageMetadata(
     "Proje Galerisi",
-    "Listelee.io ile hayata geçirilmiş başarılı proje örnekleri. İlham al, kendi projenin için fikir edin.",
+    "listelee.lumiostudio.co ile hayata geçirilmiş başarılı proje örnekleri. İlham al, kendi projenin için fikir edin.",
     "/showcase"
   ),
   login: createPageMetadata(
     "Giriş Yap",
-    "Listelee.io hesabına giriş yap. Projelerini yönet, müşteri verilerini takip et.",
+    "listelee.lumiostudio.co hesabına giriş yap. Projelerini yönet, müşteri verilerini takip et.",
     "/login"
   ),
   onboarding: createPageMetadata(
     "Başlangıç",
-    "Listelee.io'ya hoş geldin! İlk projeni oluştur ve fikrini hayata geçirmeye başla.",
+    "listelee.lumiostudio.co'ya hoş geldin! İlk projeni oluştur ve fikrini hayata geçirmeye başla.",
     "/onboarding"
   ),
 } 

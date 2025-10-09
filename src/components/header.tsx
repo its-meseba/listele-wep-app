@@ -67,7 +67,7 @@ export default function Header() {
       >
         <Link href="/" className="flex items-center gap-1 md:gap-2 shrink-0">
           <Logo />
-          <span className="font-bold text-black dark:text-white text-sm md:text-base">Listelee.io</span>
+          <span className="font-bold text-black dark:text-white text-sm md:text-base">listelee.lumiostudio.co</span>
         </Link>
 
         <div className="flex items-center gap-1 md:gap-4">

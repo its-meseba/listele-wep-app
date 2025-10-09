@@ -50,7 +50,7 @@ export function generateProjectKeywords(
     'müşteri toplama',
     'startup',
     'girişimcilik',
-    'listelee.io',
+    'listelee.lumiostudio.co',
     'proje validation',
     'mvp',
     'iş fikri'
@@ -175,7 +175,7 @@ export function generateProductSchema(project: any) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": project.config.title || project.name,
-    "description": project.config.subtitle || project.config.description || `${project.name} - Listelee.io ile oluşturulmuş proje`,
+    "description": project.config.subtitle || project.config.description || `${project.name} - listelee.lumiostudio.co ile oluşturulmuş proje`,
     "url": baseUrl,
     "image": `${APP_URL}/opengraph-image.png`,
     "brand": {
@@ -199,7 +199,7 @@ export function generateProductSchema(project: any) {
     } : undefined,
     "creator": {
       "@type": "Organization",
-      "name": "Listelee.io",
+      "name": "listelee.lumiostudio.co",
       "url": APP_URL
     }
   };
@@ -211,17 +211,17 @@ export function generateCategoryFAQSchema(category: string) {
     'e-commerce': [
       {
         question: "E-ticaret projesi için landing page nasıl oluşturulur?",
-        answer: "Listelee.io ile e-ticaret projeniz için profesyonel landing page dakikalar içinde oluşturabilirsiniz. Ürün tanıtımı, müşteri yorumları ve satış sayfası özelliklerini kolayca ekleyebilirsiniz."
+        answer: "listelee.lumiostudio.co ile e-ticaret projeniz için profesyonel landing page dakikalar içinde oluşturabilirsiniz. Ürün tanıtımı, müşteri yorumları ve satış sayfası özelliklerini kolayca ekleyebilirsiniz."
       },
       {
         question: "E-ticaret startup'ı için hangi özellikler önemli?",
-        answer: "E-ticaret projesi için müşteri güven sinyalleri, ürün görselleri, fiyat bilgileri ve kolay iletişim formu kritik önemde. Listelee.io bu özellikleri otomatik olarak sayfanıza ekler."
+        answer: "E-ticaret projesi için müşteri güven sinyalleri, ürün görselleri, fiyat bilgileri ve kolay iletişim formu kritik önemde. listelee.lumiostudio.co bu özellikleri otomatik olarak sayfanıza ekler."
       }
     ],
     'saas': [
       {
         question: "SaaS ürünü için etkili landing page nasıl olmalı?",
-        answer: "SaaS landing page'inde ürünün çözdüğü problem, özellikler, fiyatlandırma ve demo talebi formu bulunmalı. Listelee.io ile SaaS projeler için optimize edilmiş şablonlar kullanabilirsiniz."
+        answer: "SaaS landing page'inde ürünün çözdüğü problem, özellikler, fiyatlandırma ve demo talebi formu bulunmalı. listelee.lumiostudio.co ile SaaS projeler için optimize edilmiş şablonlar kullanabilirsiniz."
       }
     ]
   };

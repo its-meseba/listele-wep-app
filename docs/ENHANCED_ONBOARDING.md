@@ -1,6 +1,6 @@
 # Enhanced Onboarding Implementation 🚀
 
-Bu dokuman, Listelee.io için geliştirilmiş onboarding sisteminin detaylı açıklamasını içerir.
+Bu dokuman, listelee.lumiostudio.co için geliştirilmiş onboarding sisteminin detaylı açıklamasını içerir.
 
 ## 🎯 Amaç
 
@@ -243,4 +243,4 @@ NEXT_PUBLIC_ANALYTICS_ENABLED=true
 - User feedback integration
 - Continuous A/B testing
 
-Bu implementation ile Listelee.io'nun user activation ve growth metrics'lerinde significant improvement bekleniyor! 🎯 
+Bu implementation ile listelee.lumiostudio.co'nun user activation ve growth metrics'lerinde significant improvement bekleniyor! 🎯 

@@ -5,8 +5,8 @@ excerpt: "Başarılı bir startup kurmak için en kritik adım: doğru müşteri
 category: "Pazarlama"
 tags: ["müşteri segmentasyonu", "customer development", "persona", "market research", "startup", "müşteri ihtiyaçları"]
 author:
-  name: "Listelee.io"
-  email: "info@listelee.io"
+  name: "listelee.lumiostudio.co"
+  email: "info@listelee.lumiostudio.co"
 publishedAt: "2025-07-22T10:00:00Z"
 readingTime: 10
 seo:
@@ -291,6 +291,6 @@ Başarılı startup kurmak için en önemli beceri kodlama değil, **müşteri e
 
 ---
 
-**Müşteri keşfi yolculuğunuza hemen başlamak için** [Listelee.io](/) ile **açılış sayfanızı (landing page)** oluşturun ve ilk geri bildirimlerinizi toplamaya başlayın!
+**Müşteri keşfi yolculuğunuza hemen başlamak için** [listelee.lumiostudio.co](/) ile **açılış sayfanızı (landing page)** oluşturun ve ilk geri bildirimlerinizi toplamaya başlayın!
 
 *Bu rehber işinize yaradıysa, diğer girişimcilerle paylaşmayı unutmayın! 🌟* 

@@ -23,6 +23,13 @@ export default function RootLayout({
 	return (
 		<html lang="tr" className={interTight.variable} suppressHydrationWarning>
 			<head>
+				<script
+					defer
+					data-website-id="dfid_S6BVvBcMoPMvyrAMfbxct"
+					data-domain="listelee.lumiostudio.co"
+					data-allow-localhost="true"
+					src="https://datafa.st/js/script.js"
+				/>
 				{structuredData.map((data, index) => (
 					<script
 						key={index}

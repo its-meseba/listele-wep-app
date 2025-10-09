@@ -19,7 +19,7 @@ export function StructuredData({ data }: StructuredDataProps) {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Listelee.io",
+  "name": "listelee.lumiostudio.co",
   "url": "https://listele.io",
   "logo": "https://listele.io/Logo.png",
   "sameAs": [
@@ -35,20 +35,20 @@ export const organizationSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Listelee.io",
+  "name": "listelee.lumiostudio.co",
   "url": "https://listele.io",
   "description": "Fikirlerini hızla hayata geçir. AI destekli platform ile projelerini oluştur, müşteri topla ve büyü.",
   "inLanguage": "tr",
   "author": {
     "@type": "Organization",
-    "name": "Listelee.io"
+    "name": "listelee.lumiostudio.co"
   }
 };
 
 export const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Listelee.io",
+  "name": "listelee.lumiostudio.co",
   "description": "AI destekli platform ile projelerini oluştur, müşteri topla ve büyü. Türkiye'nin en hızlı landing page oluşturucusu.",
   "url": "https://listele.io",
   "applicationCategory": "BusinessApplication",
@@ -61,7 +61,7 @@ export const softwareApplicationSchema = {
   },
   "author": {
     "@type": "Organization", 
-    "name": "Listelee.io"
+    "name": "listelee.lumiostudio.co"
   },
   "inLanguage": "tr",
   "availableLanguage": "Turkish",
@@ -77,11 +77,11 @@ export const softwareApplicationSchema = {
 export const pricingPageSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Listelee.io Landing Page Builder",
+  "name": "listelee.lumiostudio.co Landing Page Builder",
   "description": "AI destekli landing page oluşturma platformu",
   "brand": {
     "@type": "Brand",
-    "name": "Listelee.io"
+    "name": "listelee.lumiostudio.co"
   },
   "offers": [
     {

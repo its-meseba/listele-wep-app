@@ -179,13 +179,18 @@ export default function ProjectEditorPage() {
     };
 
     const generateSlug = (name: string): string => {
+        // Add safety check for undefined/null values
+        if (!name || typeof name !== 'string') {
+            return 'yeni-proje-' + Date.now().toString().slice(-6);
+        }
+
         // Remove Turkish characters and convert to ASCII equivalents
         const turkishMap: { [key: string]: string } = {
             'ş': 's', 'Ş': 'S', 'ğ': 'g', 'Ğ': 'G',
             'ü': 'u', 'Ü': 'U', 'ö': 'o', 'Ö': 'O',
             'ı': 'i', 'İ': 'I', 'ç': 'c', 'Ç': 'C'
         };
-        
+
         let slug = name;
         Object.keys(turkishMap).forEach(char => {
             slug = slug.replace(new RegExp(char, 'g'), turkishMap[char]);
@@ -251,7 +256,7 @@ export default function ProjectEditorPage() {
         }
 
         setLoading(true);
-        const slug = generateSlug(config.name);
+        const slug = generateSlug(config.name || 'Yeni Proje');
 
         try {
             if (isEditing) {

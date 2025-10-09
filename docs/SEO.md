@@ -1,10 +1,10 @@
 # SEO and LLM Optimization Documentation
 
-This document outlines all the SEO (Search Engine Optimization) and LLM (Large Language Model) optimization features implemented for Listelee.io.
+This document outlines all the SEO (Search Engine Optimization) and LLM (Large Language Model) optimization features implemented for listelee.lumiostudio.co.
 
 ## Overview
 
-Listelee.io is optimized for both traditional search engines (Google, Bing) and modern AI crawlers (ChatGPT, Claude, Perplexity) to ensure maximum visibility and proper content understanding.
+listelee.lumiostudio.co is optimized for both traditional search engines (Google, Bing) and modern AI crawlers (ChatGPT, Claude, Perplexity) to ensure maximum visibility and proper content understanding.
 
 ## Implemented Features
 

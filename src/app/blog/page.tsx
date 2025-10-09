@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import { APP_URL } from '~/lib/config';
 
 export const metadata: Metadata = {
-  title: 'Blog - Girişimcilik, Startup ve Teknoloji İçerikleri | Listelee.io',
-  description: 'Girişimcilik, startup dünyası, teknoloji trendleri ve proje geliştirme hakkında uzman içerikleri. Listelee.io blog\'da sektörün en güncel bilgilerini keşfedin.',
+  title: 'Blog - Girişimcilik, Startup ve Teknoloji İçerikleri | listelee.lumiostudio.co',
+  description: 'Girişimcilik, startup dünyası, teknoloji trendleri ve proje geliştirme hakkında uzman içerikleri. listelee.lumiostudio.co blog\'da sektörün en güncel bilgilerini keşfedin.',
   keywords: [
     'girişimcilik blog',
     'startup blog',
@@ -22,17 +22,17 @@ export const metadata: Metadata = {
     canonical: '/blog',
   },
   openGraph: {
-    title: 'Blog - Girişimcilik ve Startup İçerikleri | Listelee.io',
+    title: 'Blog - Girişimcilik ve Startup İçerikleri | listelee.lumiostudio.co',
     description: 'Girişimcilik, startup dünyası ve teknoloji trendleri hakkında uzman içerikleri keşfedin.',
     url: `${APP_URL}/blog`,
-    siteName: 'Listelee.io',
+    siteName: 'listelee.lumiostudio.co',
     images: [`${APP_URL}/opengraph-image.png`],
     locale: 'tr_TR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - Girişimcilik ve Startup İçerikleri | Listelee.io',
+    title: 'Blog - Girişimcilik ve Startup İçerikleri | listelee.lumiostudio.co',
     description: 'Girişimcilik, startup dünyası ve teknoloji trendleri hakkında uzman içerikleri keşfedin.',
     images: [`${APP_URL}/twitter-image.png`],
   },
@@ -64,13 +64,13 @@ export default async function BlogPage() {
   const blogStructuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Listelee.io Blog",
+    "name": "listelee.lumiostudio.co Blog",
     "description": "Girişimcilik, startup dünyası ve teknoloji trendleri hakkında uzman içerikleri",
     "url": `${APP_URL}/blog`,
     "inLanguage": "tr",
     "publisher": {
       "@type": "Organization",
-      "name": "Listelee.io",
+      "name": "listelee.lumiostudio.co",
       "url": APP_URL,
       "logo": `${APP_URL}/Logo.png`
     },
@@ -91,7 +91,7 @@ export default async function BlogPage() {
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Listelee.io",
+        "name": "listelee.lumiostudio.co",
         "url": APP_URL
       }
     }))

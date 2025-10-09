@@ -136,7 +136,7 @@ export default function ShowcasePage() {
               <Sparkles className="w-8 h-8 text-[#D8FF00]" />
             </div>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Listelee.io ile hayata geçirilmiş başarılı projelerden ilham alın. 
+              listelee.lumiostudio.co ile hayata geçirilmiş başarılı projelerden ilham alın. 
               Her biri gerçek girişimcilerin hikayesi ve müşteri toplama başarısı!
             </p>
           </div>
@@ -397,7 +397,7 @@ export default function ShowcasePage() {
               Senin Projen de Burada Olabilir! 🚀
             </h3>
             <p className="text-black/80 mb-6 max-w-2xl mx-auto">
-              Listelee.io ile kendi landing page'ini oluştur, müşteri topla ve başarı hikayenin binlerce kişiye ilham versin.
+              listelee.lumiostudio.co ile kendi landing page'ini oluştur, müşteri topla ve başarı hikayenin binlerce kişiye ilham versin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/onboarding">

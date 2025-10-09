@@ -1,5 +1,7 @@
-export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://my-app.com';
 
 export const isPaymentEnabled = () => {
-  return process.env.NEXT_PUBLIC_PAYMENT_ENABLED === 'true';
+  // Temporarily enabled for testing
+  return true;
+  // return process.env.NEXT_PUBLIC_PAYMENT_ENABLED === 'true';
 }; 
