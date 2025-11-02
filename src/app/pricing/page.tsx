@@ -35,7 +35,7 @@ export default function PricingPage() {
 
     const handleChoosePlan = async (slug: string) => {
         if (!paymentEnabled) {
-            toast.info("Fiyatlandırma sistemi henüz aktif değil. Şu anda sınırlı kullanım mevcuttur.");
+            toast.info("Pricing system is not yet active. Limited usage is currently available.");
             return;
         }
 
@@ -46,7 +46,7 @@ export default function PricingPage() {
             try {
                 const plan = getPlanBySlug(slug);
                 if (!plan || !plan.polarProductId) {
-                    toast.error('Geçersiz plan seçildi.');
+                    toast.error('Invalid plan selected.');
                     return;
                 }
 
@@ -55,13 +55,13 @@ export default function PricingPage() {
                 window.location.href = checkoutUrl;
             } catch (error) {
                 console.error('Payment error:', error);
-                toast.error('Ödeme sistemi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.');
+                toast.error('Payment system is temporarily unavailable. Please try again later.');
             }
         }
     };
     
     if (loading) {
-        return <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center text-gray-900 dark:text-white">Yükleniyor...</div>
+        return <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center text-gray-900 dark:text-white">Loading...</div>
     }
 
   return (
@@ -70,15 +70,15 @@ export default function PricingPage() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold leading-7 text-gray-900 bg-primary/10 px-4 py-2 rounded-full inline-block dark:text-white">
-            Özellikler & Planlar
+            Features & Plans
           </h2>
           <p className="mt-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            {paymentEnabled ? "Lifetime Planları Keşfedin" : "Tüm Özellikleri Keşfedin"}
+            {paymentEnabled ? "Discover Lifetime Plans" : "Discover All Features"}
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
             {paymentEnabled
-              ? "Bir kez ödeyin, ömür boyu kullanın. Her plan güçlü özelliklerle tasarlandı ve proje limitleriniz var."
-              : "listelee.lumiostudio.co'nun sunduğu tüm özellikleri görün. Fiyatlandırma yakında aktif olacak."
+              ? "Pay once, use forever. Every plan is designed with powerful features and includes project limits."
+              : "See all the features First100 offers. Pricing will be available soon."
             }
           </p>
           {!paymentEnabled && (
@@ -86,7 +86,7 @@ export default function PricingPage() {
               <div className="flex items-center justify-center p-4 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 border-2 border-yellow-300 dark:border-yellow-600 rounded-xl shadow-sm">
                 <Clock className="h-5 w-5 text-yellow-600 dark:text-yellow-400 mr-3" />
                 <span className="text-sm text-yellow-900 dark:text-yellow-100 font-semibold">
-                  Fiyatlandırma yakında aktif olacak
+                  Pricing coming soon
                 </span>
               </div>
             </div>
@@ -107,11 +107,11 @@ export default function PricingPage() {
                   {freePlan.name}
                 </h3>
                 <div className="bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 px-3 py-1 rounded-full text-xs font-semibold">
-                  Aktif
+                  Active
                 </div>
               </div>
               <p className="mt-4 text-base leading-6 text-green-700 dark:text-green-200 font-medium">
-                {paymentEnabled ? "Hızlı başlangıç için temel özellikler" : "Şu anda tüm kullanıcılar için mevcut olan sınırlı kullanım paketi"}
+                {paymentEnabled ? "Get started with essential features" : "Limited usage package currently available for all users"}
               </p>
               {paymentEnabled && (
                 <p className="mt-6 flex items-baseline gap-x-1">
@@ -124,7 +124,7 @@ export default function PricingPage() {
                 </p>
               )}
               <div className="mt-8">
-                <h4 className="text-sm font-semibold text-green-800 dark:text-green-200 uppercase tracking-wide mb-4">Özellikler</h4>
+                <h4 className="text-sm font-semibold text-green-800 dark:text-green-200 uppercase tracking-wide mb-4">Features</h4>
                 <ul className="space-y-4">
                   {freePlan.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
@@ -137,7 +137,7 @@ export default function PricingPage() {
             </div>
             <Link href="/dashboard" className="mt-8">
               <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg">
-                {paymentEnabled ? "Başla" : "Sınırlı Kullanımla Başla"}
+                {paymentEnabled ? "Get Started" : "Start with Limited Access"}
               </Button>
             </Link>
           </motion.div>
@@ -164,8 +164,8 @@ export default function PricingPage() {
                 <div className="absolute inset-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-3xl flex items-center justify-center z-10">
                   <div className="text-center">
                     <Clock className="h-10 w-10 text-gray-500 mx-auto mb-3" />
-                    <p className="text-lg font-bold text-gray-700 dark:text-gray-300">Yakında</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Bu plan çok yakında aktif olacak</p>
+                    <p className="text-lg font-bold text-gray-700 dark:text-gray-300">Coming Soon</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">This plan will be available soon</p>
                   </div>
                 </div>
               )}
@@ -182,7 +182,7 @@ export default function PricingPage() {
                 </h3>
                 {plan.slug === 'professional' && (
                   <div className="bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold border border-white/30">
-                    ⭐ Önerilen
+                    ⭐ Recommended
                   </div>
                 )}
               </div>
@@ -193,9 +193,9 @@ export default function PricingPage() {
                 plan.slug === 'starter' ? "text-orange-700 dark:text-orange-200" :
                 "text-purple-700 dark:text-purple-200"
               )}>
-                {plan.slug === 'starter' && "Başlangıç seviyesinde güçlü araçlar"}
-                {plan.slug === 'professional' && "Profesyoneller için tam özellikli çözüm"}
-                {plan.slug === 'enterprise' && "Kurumsal düzeyde gelişmiş özellikler"}
+                {plan.slug === 'starter' && "Custom domain and unlimited leads"}
+                {plan.slug === 'professional' && "Complete solution with media support"}
+                {plan.slug === 'enterprise' && "Advanced features for teams"}
               </p>
 
               {paymentEnabled && (
@@ -275,7 +275,7 @@ export default function PricingPage() {
       <Dialog open={showAuthModal} onOpenChange={setShowAuthModal}>
           <DialogContent className="bg-white dark:bg-slate-900 border-gray-200 dark:border-slate-700">
               <DialogHeader>
-                  <DialogTitle className="text-gray-900 dark:text-gray-100">Devam Etmek İçin Giriş Yapın</DialogTitle>
+                  <DialogTitle className="text-gray-900 dark:text-gray-100">Sign In to Continue</DialogTitle>
               </DialogHeader>
               <AuthForm onSuccess={async () => {
                   setShowAuthModal(false);

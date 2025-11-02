@@ -21,7 +21,7 @@ interface KeywordResearch {
   contentGaps: string[];
 }
 
-// Turkish SEO keyword data for listelee.lumiostudio.co
+// Turkish SEO keyword data for first100.lumiostudio.co
 const TURKISH_KEYWORDS: KeywordData[] = [
   // Primary Keywords
   { keyword: 'landing page oluşturucu', searchVolume: 2900, competition: 'medium', cpc: 8.50, trend: 'rising', difficulty: 45, intent: 'commercial' },
@@ -264,7 +264,7 @@ class KeywordResearcher {
 async function main() {
   const researcher = new KeywordResearcher();
 
-  console.log('🔍 Keyword Research for listelee.lumiostudio.co\n');
+  console.log('🔍 Keyword Research for first100.lumiostudio.co\n');
 
   const research = researcher.generateKeywordResearch();
 

@@ -21,12 +21,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="tr" className={interTight.variable} suppressHydrationWarning>
+		<html lang="en" className={interTight.variable} suppressHydrationWarning>
 			<head>
 				<script
 					defer
 					data-website-id="dfid_S6BVvBcMoPMvyrAMfbxct"
-					data-domain="listelee.lumiostudio.co"
+					data-domain="first100.lumiostudio.co"
 					data-allow-localhost="true"
 					src="https://datafa.st/js/script.js"
 				/>

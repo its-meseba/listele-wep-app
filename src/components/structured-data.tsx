@@ -19,9 +19,9 @@ export function StructuredData({ data }: StructuredDataProps) {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "listelee.lumiostudio.co",
-  "url": "https://listele.io",
-  "logo": "https://listele.io/Logo.png",
+  "name": "first100.lumiostudio.co",
+  "url": "https://first100.lumiostudio.co",
+  "logo": "https://first100.lumiostudio.co/Logo.png",
   "sameAs": [
     "https://twitter.com/listeleio"
   ],
@@ -35,22 +35,22 @@ export const organizationSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "listelee.lumiostudio.co",
-  "url": "https://listele.io",
+  "name": "first100.lumiostudio.co",
+  "url": "https://first100.lumiostudio.co",
   "description": "Fikirlerini hızla hayata geçir. AI destekli platform ile projelerini oluştur, müşteri topla ve büyü.",
   "inLanguage": "tr",
   "author": {
     "@type": "Organization",
-    "name": "listelee.lumiostudio.co"
+    "name": "first100.lumiostudio.co"
   }
 };
 
 export const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "listelee.lumiostudio.co",
+  "name": "first100.lumiostudio.co",
   "description": "AI destekli platform ile projelerini oluştur, müşteri topla ve büyü. Türkiye'nin en hızlı landing page oluşturucusu.",
-  "url": "https://listele.io",
+  "url": "https://first100.lumiostudio.co",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
   "offers": {
@@ -61,7 +61,7 @@ export const softwareApplicationSchema = {
   },
   "author": {
     "@type": "Organization", 
-    "name": "listelee.lumiostudio.co"
+    "name": "first100.lumiostudio.co"
   },
   "inLanguage": "tr",
   "availableLanguage": "Turkish",
@@ -77,11 +77,11 @@ export const softwareApplicationSchema = {
 export const pricingPageSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "listelee.lumiostudio.co Landing Page Builder",
+  "name": "first100.lumiostudio.co Landing Page Builder",
   "description": "AI destekli landing page oluşturma platformu",
   "brand": {
     "@type": "Brand",
-    "name": "listelee.lumiostudio.co"
+    "name": "first100.lumiostudio.co"
   },
   "offers": [
     {

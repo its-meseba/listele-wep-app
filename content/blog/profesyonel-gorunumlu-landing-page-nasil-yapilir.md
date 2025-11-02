@@ -1,18 +1,18 @@
 ---
-title: "Profesyonel Görünümlü Landing Page Nasıl Yapılır? Branding ve Tasarım Rehberi"
-slug: "profesyonel-gorunumlu-landing-page-nasil-yapilir"
-excerpt: "Landing page'iniz amatör mü görünüyor? Profesyonel tasarımın sırları burada. Branding, görsel hiyerarşi, UX prensipleri ve modern tasarım trendleriyle etkileyici sayfalar oluşturun."
-category: "Tasarım"
-tags: ["landing page tasarımı", "branding", "UX", "görsel tasarım", "profesyonel görünüm", "tasarım trendleri"]
+title: "How to Make a Professional Looking Landing Page? Branding and Design Guide"
+slug: "how-to-make-professional-looking-landing-page"
+excerpt: "Does your landing page look amateur? Secrets of professional design are here. Create impressive pages with branding, visual hierarchy, UX principles, and modern design trends."
+category: "Design"
+tags: ["landing page design", "branding", "UX", "visual design", "professional appearance", "design trends"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-20T10:00:00Z"
 readingTime: 9
 seo:
-  title: "Profesyonel Landing Page Tasarımı - Branding ve UX Rehberi"
-  description: "Profesyonel görünümlü landing page yapmak mı istiyorsunuz? Branding, tasarım prensipleri ve modern trendlerle etkileyici sayfalar oluşturun."
-  keywords: ["landing page tasarımı", "profesyonel tasarım", "branding", "UX", "görsel hiyerarşi", "landing page", "tasarım trendleri"]
+  title: "Professional Landing Page Design - Branding and UX Guide"
+  description: "Want to make a professional looking landing page? Create impressive pages with branding, design principles, and modern trends."
+  keywords: ["landing page design", "professional design", "branding", "UX", "visual hierarchy", "landing page", "design trends"]
 ---
 
 # Profesyonel Görünümlü Landing Page Nasıl Yapılır? Branding ve Tasarım Rehberi

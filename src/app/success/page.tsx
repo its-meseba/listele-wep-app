@@ -31,7 +31,7 @@ function SuccessPageContent() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Ödemeniz doğrulanıyor...</p>
+          <p className="text-gray-600 dark:text-gray-400">Verifying your payment...</p>
         </div>
       </div>
     );
@@ -58,11 +58,11 @@ function SuccessPageContent() {
 
           {/* Success Message */}
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl mb-4">
-            Ödeme Başarılı! 🎉
+            Payment Successful! 🎉
           </h1>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto">
-            Tebrikler! listelee.lumiostudio.co lifetime lisansınız aktif edildi. Artık tüm premium özelliklere sınırsız erişiminiz var.
+            Congratulations! Your first100.lumiostudio.co lifetime license has been activated. You now have unlimited access to all premium features.
           </p>
 
           {/* Plan Details */}
@@ -73,24 +73,24 @@ function SuccessPageContent() {
             className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 mb-8"
           >
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Premium Özellikleriniz Aktif
+              Your Premium Features Are Active
             </h3>
             <div className="space-y-3 text-left">
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">Lifetime Erişim</span>
+                <span className="text-gray-700 dark:text-gray-300">Lifetime Access</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">3 Proje Limiti</span>
+                <span className="text-gray-700 dark:text-gray-300">3 Project Limit</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">Öncelikli Destek</span>
+                <span className="text-gray-700 dark:text-gray-300">Priority Support</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">İleri Analitik</span>
+                <span className="text-gray-700 dark:text-gray-300">Advanced Analytics</span>
               </div>
             </div>
           </motion.div>
@@ -104,14 +104,14 @@ function SuccessPageContent() {
           >
             <Link href="/dashboard">
               <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200">
-                Dashboard'a Git
+                Go to Dashboard
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/">
               <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold">
                 <Home className="mr-2 h-5 w-5" />
-                Ana Sayfa
+                Home
               </Button>
             </Link>
           </motion.div>
@@ -124,14 +124,14 @@ function SuccessPageContent() {
             className="mt-12 text-sm text-gray-500 dark:text-gray-400"
           >
             <p>
-              Sorularınız mı var?{' '}
+              Have questions?{' '}
               <a
-                href="mailto:support@listelee.lumiostudio.co"
+                href="mailto:support@first100.lumiostudio.co"
                 className="text-blue-600 dark:text-blue-400 hover:underline"
               >
-                support@listelee.lumiostudio.co
+                support@first100.lumiostudio.co
               </a>{' '}
-              adresinden bize ulaşabilirsiniz.
+              to reach out to us.
             </p>
           </motion.div>
         </motion.div>
@@ -146,7 +146,7 @@ export default function SuccessPage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Ödemeniz doğrulanıyor...</p>
+          <p className="text-gray-600 dark:text-gray-400">Verifying your payment...</p>
         </div>
       </div>
     }>

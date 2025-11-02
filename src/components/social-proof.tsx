@@ -3,32 +3,27 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function SocialProof() {
-  const [userCount, setUserCount] = useState("1,000"); // Example starting count
-
-  // This could be updated with real data later
-  useEffect(() => {
-    // Example of fetching real data
-    // fetch('/api/user-count').then(res => res.json()).then(data => setUserCount(data.count.toLocaleString()));
-  }, []);
+  // User count is now static per design
+  const userCount = "1,000";
 
   const testimonials = [
     {
-      name: "Selin Y.",
-      title: "Kurucu, Organik Atölye",
+      name: "Sarah K.",
+      title: "Founder, Tech Startup",
       quote:
-        "Fikrimi bir gecede hayata geçirdim ve ilk hafta 100'den fazla bekleyen topladım. Bu hız inanılmaz.",
+        "I launched in a weekend and got 250 signups. First100 made it so easy to validate my idea before building.",
     },
     {
-      name: "Ahmet C.",
-      title: "Girişimci",
+      name: "Marcus L.",
+      title: "Product Manager",
       quote:
-        "Aylarca sürecek bir işi dakikalar içinde başlattım. Yatırımcı sunumumda gösterdiğim 500 kişilik bekleme listesi her şeyi değiştirdi.",
+        "The voice-to-project feature saved me hours. I described my idea, and First100 generated everything I needed.",
     },
     {
-      name: "Elif T.",
-      title: "Tasarımcı",
+      name: "Elena R.",
+      title: "Solo Founder",
       quote:
-        "Teknik bilgim sıfır olmasına rağmen, etkileyici bir bekleme sayfası oluşturdum. İlk gün 50 kayıt aldım; daha motive olamazdım.",
+        "No code needed, no design skills required. I created my waitlist page in minutes and collected my first 100 users in a week.",
     },
   ];
   
@@ -43,10 +38,10 @@ export default function SocialProof() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-black dark:text-white">
-            <span className="text-[#D8FF00]">{userCount}+</span> Girişimci Bize Güveniyor
+            Trusted by <span className="text-[#D8FF00]">1,000+</span> Entrepreneurs
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-900 dark:text-gray-300 mt-4">
-            Listelee ile bekleme listesi açan girişimcilerin yorumları.
+            See what founders are saying about First100.
           </p>
         </motion.div>
         <motion.div

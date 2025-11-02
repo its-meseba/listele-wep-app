@@ -15,39 +15,39 @@ export default function Features() {
   const features = [
     {
       icon: <Code size={32} className="text-black dark:text-[#D8FF00]"/>,
-      title: "Founder Mode AI & Kodsuz Editör",
+      title: "AI Page Generator",
       description:
-        "Bekleme sayfanı ister sesle anlat yapay zeka kursun, ister sürükle-bırak kolaylığıyla kendin tasarla. Kod bilmeye gerek yok.",
+        "Benefit-driven copy and sections. AI drafts your page copy, benefits, and sections automatically.",
     },
     {
       icon: <Zap size={32} className="text-black dark:text-[#D8FF00]"/>,
-      title: "Anında Lansman",
+      title: "Voice-to-Project (beta)",
       description:
-        "Sayfan hazır olduğunda tek tıkla yayına al ve bekleme listeni toplamaya başla. Beklemek yok, sadece aksiyon.",
+        "Create a page by talking. Describe your idea verbally; AI generates the complete landing page structure.",
     },
     {
       icon: <Gauge size={32} className="text-black dark:text-[#D8FF00]"/>,
-      title: "Büyüme Panelin",
+      title: "Media Support (Pro)",
       description:
-        "Listeye katılanları ve nereden geldiklerini gör. Stratejini verilerle şekillendir, bir sonraki adımı güvenle at.",
+        "Upload images & a teaser video. Customize your waitlist page with professional visuals and promotional content.",
     },
     {
       icon: <Database size={32} className="text-black dark:text-[#D8FF00]"/>,
-      title: "Bekleyenlerin Güvende",
+      title: "Lead Capture",
       description:
-        "Topladığın tüm kayıtlar güvenle saklanır ve kontrol tamamen sendedir. Listeni dilediğin zaman al, kendi yolunda ilerle.",
+        "Built-in forms, consent, and export (CSV). Capture leads with GDPR-compliant forms and export your list anytime.",
     },
     {
       icon: <Globe size={32} className="text-black dark:text-[#D8FF00]"/>,
-      title: "Markanı İnşa Et",
+      title: "Intent Analytics",
       description:
-        "Girişimin büyüdükçe, markan da büyür. Kendi alan adını kolayca bağlayarak kurumsal kimliğini bir üst seviyeye taşı.",
+        "Click heat, interest tags, conversion. Measure real demand with detailed analytics and user behavior insights.",
     },
     {
       icon: <Wallet size={32} className="text-black dark:text-[#D8FF00]"/>,
-      title: "Maliyetsiz Başlangıç",
+      title: "Custom Domain",
       description:
-        "Büyük fikirlerin önündeki en büyük engelin bütçe olmaması gerektiğine inanıyoruz. İlk adımlarını atarken cüzdanını düşünme. Sadece fikrine odaklan.",
+        "Use your domain from day one. Connect your own domain immediately and build your brand from the start.",
     },
   ];
 
@@ -61,9 +61,9 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-black dark:text-white">Kurucunun Cephaneliği</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-black dark:text-white">Everything You Need</h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-900 dark:text-gray-300 mt-4">
-            Bekleme listeni oluşturmak ve büyütmek için ihtiyacın olan her şey burada. Hız, veri ve topluluk senin kontrolünde.
+            All the tools you need to build and grow your waitlist. Speed, data, and community—all in your control.
           </p>
         </motion.div>
         <motion.div

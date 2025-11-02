@@ -1,18 +1,18 @@
 ---
-title: "Landing Page İçeriği Nasıl Yazılır? Copywriting Rehberi"
-slug: "landing-page-icerigi-nasil-yazilir-content-creation"
-excerpt: "Landing page'iniz için etkileyici içerik yazmak mı istiyorsunuz? Copywriting teknikleri, psikoloji ve dönüşüm odaklı yazma yöntemleriyle okuyucuları müşteriye dönüştürün."
-category: "İçerik"
-tags: ["copywriting", "landing page içeriği", "içerik yazma", "dönüşüm optimizasyonu", "persuasion", "marketing"]
+title: "How to Write Landing Page Content? Copywriting Guide"
+slug: "how-to-write-landing-page-content-copywriting-guide"
+excerpt: "Want to write compelling content for your landing page? Convert readers into customers with copywriting techniques, psychology, and conversion-focused writing methods."
+category: "Content"
+tags: ["copywriting", "landing page content", "content writing", "conversion optimization", "persuasion", "marketing"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-22T10:00:00Z"
 readingTime: 10
 seo:
-  title: "Landing Page İçeriği Nasıl Yazılır - Copywriting Rehberi"
-  description: "Landing page için etkileyici içerik yazmak mı istiyorsunuz? Copywriting teknikleri, persuasion ve dönüşüm odaklı yazma yöntemleriyle okuyucuları müşteriye dönüştürün."
-  keywords: ["landing page içeriği", "copywriting", "içerik yazma", "dönüşüm odaklı yazı", "persuasion teknikleri", "landing page metin"]
+  title: "How to Write Landing Page Content - Copywriting Guide"
+  description: "Want to write compelling content for your landing page? Convert readers into customers with copywriting techniques, persuasion, and conversion-focused writing methods."
+  keywords: ["landing page content", "copywriting", "content writing", "conversion-focused writing", "persuasion techniques", "landing page text"]
 ---
 
 # Landing Page İçeriği Nasıl Yazılır? Copywriting Rehberi

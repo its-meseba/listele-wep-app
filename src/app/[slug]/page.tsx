@@ -22,7 +22,7 @@ function generateProjectStructuredData(project: Project) {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": project.config.title || project.name,
-      "description": project.config.subtitle || project.config.description || `${project.name} - listelee.lumiostudio.co ile oluşturulmuş proje`,
+      "description": project.config.subtitle || project.config.description || `${project.name} - first100.lumiostudio.co ile oluşturulmuş proje`,
       "url": baseUrl,
       "image": `${APP_URL}/opengraph-image.png`,
       "brand": {
@@ -47,7 +47,7 @@ function generateProjectStructuredData(project: Project) {
       } : undefined,
       "isRelatedTo": {
         "@type": "WebApplication",
-        "name": "listelee.lumiostudio.co",
+        "name": "first100.lumiostudio.co",
         "url": APP_URL,
         "applicationCategory": "Landing Page Builder"
       }
@@ -62,7 +62,7 @@ function generateProjectStructuredData(project: Project) {
       "inLanguage": "tr",
       "isPartOf": {
         "@type": "WebSite",
-        "name": "listelee.lumiostudio.co",
+        "name": "first100.lumiostudio.co",
         "url": APP_URL
       },
       "about": {
@@ -110,8 +110,8 @@ export async function generateMetadata(
 
   if (!project) {
     return {
-      title: 'Proje Bulunamadı - listelee.lumiostudio.co',
-      description: 'Aradığınız proje bulunamadı. listelee.lumiostudio.co\'da binlerce proje keşfedin.',
+      title: 'Proje Bulunamadı - first100.lumiostudio.co',
+      description: 'Aradığınız proje bulunamadı. first100.lumiostudio.co\'da binlerce proje keşfedin.',
     };
   }
   
@@ -122,7 +122,7 @@ export async function generateMetadata(
   // Enhanced title and description for SEO
   const seoTitle = project.config.title || project.name;
   const seoDescription = project.config.subtitle || project.config.description || 
-    `${project.name} - listelee.lumiostudio.co ile oluşturulmuş ${project.config.category || 'startup'} projesi. Müşteri toplama ve proje validation platformu.`;
+    `${project.name} - first100.lumiostudio.co ile oluşturulmuş ${project.config.category || 'startup'} projesi. Müşteri toplama ve proje validation platformu.`;
   
   // Generate keywords based on project content
   const keywords = [
@@ -133,16 +133,16 @@ export async function generateMetadata(
     'müşteri toplama',
     'startup',
     'girişimcilik',
-    'listelee.lumiostudio.co'
+    'first100.lumiostudio.co'
   ].join(', ');
 
   return {
-    title: `${seoTitle} | listelee.lumiostudio.co`,
+    title: `${seoTitle} | first100.lumiostudio.co`,
     description: seoDescription,
     keywords,
-    authors: [{ name: 'listelee.lumiostudio.co', url: APP_URL }],
+    authors: [{ name: 'first100.lumiostudio.co', url: APP_URL }],
     creator: project.name,
-    publisher: 'listelee.lumiostudio.co',
+    publisher: 'first100.lumiostudio.co',
     formatDetection: {
       email: false,
       address: false,
@@ -152,16 +152,16 @@ export async function generateMetadata(
       canonical: `/${project.slug}`,
     },
     openGraph: {
-      title: `${seoTitle} | listelee.lumiostudio.co`,
+      title: `${seoTitle} | first100.lumiostudio.co`,
       description: seoDescription,
       url: projectUrl,
-      siteName: 'listelee.lumiostudio.co',
+      siteName: 'first100.lumiostudio.co',
       images: [
         {
           url: defaultImageUrl,
           width: 1200,
           height: 630,
-          alt: `${seoTitle} - listelee.lumiostudio.co Project`,
+          alt: `${seoTitle} - first100.lumiostudio.co Project`,
         },
         ...previousImages
       ],
@@ -170,7 +170,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${seoTitle} | listelee.lumiostudio.co`,
+      title: `${seoTitle} | first100.lumiostudio.co`,
       description: seoDescription,
       images: [defaultImageUrl],
       creator: '@listeleio',

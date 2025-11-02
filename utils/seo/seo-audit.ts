@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// SEO Audit Script for listelee.lumiostudio.co
+// SEO Audit Script for first100.lumiostudio.co
 interface SEOIssue {
   type: 'error' | 'warning' | 'info';
   category: string;
@@ -22,10 +22,10 @@ interface SEOAuditResult {
 
 class SEOAudit {
   private issues: SEOIssue[] = [];
-  private baseUrl = 'https://listelee.lumiostudio.co';
+  private baseUrl = 'https://first100.lumiostudio.co';
 
   async runAudit(): Promise<SEOAuditResult> {
-    console.log('🚀 Starting SEO Audit for listelee.lumiostudio.co...\n');
+    console.log('🚀 Starting SEO Audit for first100.lumiostudio.co...\n');
 
     await this.checkMetaTags();
     await this.checkContentQuality();

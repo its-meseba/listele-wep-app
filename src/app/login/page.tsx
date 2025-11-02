@@ -15,13 +15,14 @@ export default function LoginPage() {
       <div className="mb-8">
         <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-black dark:text-white">
           <Logo />
-          <span>listelee.lumiostudio.co</span>
+          <span>First100</span>
         </Link>
       </div>
       <div className="w-full max-w-md p-8 space-y-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
         <Suspense fallback={
           <div className="flex items-center justify-center p-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#D8FF00]"></div>
+            <span className="ml-3 text-gray-600 dark:text-gray-400">Loading...</span>
           </div>
         }>
           <AuthFormWrapper />

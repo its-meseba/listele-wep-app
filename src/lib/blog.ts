@@ -45,8 +45,8 @@ export function getBlogPostBySlug(slug: string): LocalBlogPost | null {
       excerpt: data.excerpt || '',
       content,
       author: data.author || {
-        name: 'listelee.lumiostudio.co',
-        email: 'info@listelee.lumiostudio.co'
+        name: 'first100.lumiostudio.co',
+        email: 'info@first100.lumiostudio.co'
       },
       category: data.category || 'Genel',
       tags: data.tags || [],

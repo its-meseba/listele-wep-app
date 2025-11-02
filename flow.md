@@ -1,10 +1,10 @@
-# listelee.lumiostudio.co Application Flow
+# first100.lumiostudio.co Application Flow
 
-This document outlines the user flow for the listelee.lumiostudio.co application, from the initial landing page to creating and managing a waitlist.
+This document outlines the user flow for the first100.lumiostudio.co application, from the initial landing page to creating and managing a waitlist.
 
 ## 1. Landing Page and Authentication
 
-The user journey begins on the main landing page, which is designed to quickly communicate the value proposition of listelee.lumiostudio.co.
+The user journey begins on the main landing page, which is designed to quickly communicate the value proposition of first100.lumiostudio.co.
 
 ```mermaid
 flowchart TD
@@ -78,7 +78,7 @@ flowchart TD
     E -- on duplicate --> G[Show "Already on list" Message];
 ```
 
-*   **A: Visit Public Page**: A visitor navigates to the public URL of a waitlist page (e.g., `listele.io/my-cool-idea`).
+*   **A: Visit Public Page**: A visitor navigates to the public URL of a waitlist page (e.g., `first100.lumiostudio.co/my-cool-idea`).
 *   **B: View Waitlist Form**: The page displays the waitlist form.
 *   **C: Enter Email Address**: The visitor enters their email address.
 *   **D: Submit Form**: The visitor submits the form.

@@ -1,7 +1,7 @@
-# listelee.lumiostudio.co - AI-Powered Project Landing Page Generator
+# first100.lumiostudio.co - AI-Powered Project Landing Page Generator
 
 ## Website Overview
-listelee.lumiostudio.co is a Turkish SaaS platform that helps entrepreneurs and creators quickly build professional landing pages for their project ideas. Users can create beautiful, conversion-optimized pages to collect leads and validate their business concepts.
+first100.lumiostudio.co is a Turkish SaaS platform that helps entrepreneurs and creators quickly build professional landing pages for their project ideas. Users can create beautiful, conversion-optimized pages to collect leads and validate their business concepts.
 
 ## Key Features
 - **Quick Project Creation**: Generate landing pages in minutes, not hours
@@ -27,7 +27,7 @@ listelee.lumiostudio.co is a Turkish SaaS platform that helps entrepreneurs and 
 - Project idea validation
 
 ## Pricing Structure
-- **Free Plan**: 1 project, 50 leads per project, with listelee.lumiostudio.co branding
+- **Free Plan**: 1 project, 50 leads per project, with first100.lumiostudio.co branding
 - **Basic Plan**: 5 projects, 100 leads per project, custom branding
 - **Pro Plan**: 25 projects, 1,000 leads per project, AI features
 - **Unlimited Plan**: Unlimited projects and leads, full feature access
@@ -50,14 +50,14 @@ listelee.lumiostudio.co is a Turkish SaaS platform that helps entrepreneurs and 
 - müşteri toplama (customer acquisition)
 
 ## Company Information
-- Domain: listele.io
+- Domain: first100.lumiostudio.co
 - Language: Turkish (TR)
 - Currency: Turkish Lira (TL)
 - Target Market: Turkey and Turkish-speaking regions
 - Business Model: SaaS subscription
 
 ## User Journey
-1. User discovers listelee.lumiostudio.co through marketing channels
+1. User discovers first100.lumiostudio.co through marketing channels
 2. Signs up for free account
 3. Creates first project using templates or AI assistance
 4. Customizes landing page content and design

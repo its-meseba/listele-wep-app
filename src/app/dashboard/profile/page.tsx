@@ -42,10 +42,10 @@ export default function ProfilePage() {
       // Clear the cookie
       document.cookie = 'firebase-auth-token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
       router.push('/');
-      toast.success('Başarıyla çıkış yapıldı');
+      toast.success('Signed out successfully');
     } catch (error) {
       console.error('Sign out error:', error);
-      toast.error('Çıkış yapılırken bir hata oluştu');
+      toast.error('An error occurred while signing out');
     }
   };
 
@@ -60,18 +60,18 @@ export default function ProfilePage() {
       // Then delete auth user
       await deleteFirebaseUser(user);
       
-      toast.success('Hesabınız başarıyla silindi');
+      toast.success('Your account has been deleted successfully');
       router.push('/');
     } catch (error) {
       console.error('Delete account error:', error);
-      toast.error('Hesap silinirken bir hata oluştu');
+      toast.error('An error occurred while deleting your account');
       setIsDeleting(false);
       setShowDeleteDialog(false);
     }
   };
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-screen">Yükleniyor...</div>;
+    return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
   }
 
   if (!user) {
@@ -79,25 +79,25 @@ export default function ProfilePage() {
   }
 
   const currentPlan = userProfile ? getPlanBySlug(userProfile.plan) : null;
-  const maxProjectsFeature = currentPlan?.features.find(f => f.includes("Proje"));
-  const maxProjects = maxProjectsFeature ? (maxProjectsFeature.split(" ")[0] === "Sınırsız" ? Infinity : parseInt(maxProjectsFeature.split(" ")[0])) : 0;
-  const voiceCreditsFeature = currentPlan?.features.find(f => f.includes("Sesle Proje Oluşturma"));
-  const voiceCredits = voiceCreditsFeature ? parseInt(voiceCreditsFeature.split(" ")[0]) : 0;
+  const maxProjectsFeature = currentPlan?.features.find(f => f.includes("page") || f.includes("Page"));
+  const maxProjects = maxProjectsFeature ? (maxProjectsFeature.toLowerCase().includes("unlimited") ? Infinity : parseInt(maxProjectsFeature.split(" ")[0]) || 1) : (currentPlan?.slug === 'free' ? 1 : Infinity);
+  const voiceCreditsFeature = currentPlan?.features.find(f => f.includes("Voice") || f.includes("voice"));
+  const voiceCredits = voiceCreditsFeature ? (voiceCreditsFeature.toLowerCase().includes("unlimited") ? Infinity : parseInt(voiceCreditsFeature.split(" ")[0]) || 0) : (currentPlan?.slug === 'free' ? 0 : Infinity);
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-3xl font-bold mb-8">Profilim</h1>
+      <h1 className="text-3xl font-bold mb-8">My Profile</h1>
       
       <div className="grid gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>Hesap Bilgileri</CardTitle>
-            <CardDescription>Temel hesap bilgileriniz</CardDescription>
+            <CardTitle>Account Information</CardTitle>
+            <CardDescription>Your basic account information</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div>
-                <p className="text-sm font-medium text-gray-500">E-posta</p>
+                <p className="text-sm font-medium text-gray-500">Email</p>
                 <p className="mt-1">{user.email}</p>
               </div>
             </div>
@@ -106,18 +106,18 @@ export default function ProfilePage() {
 
         <Card>
             <CardHeader>
-                <CardTitle>Plan ve Kullanım</CardTitle>
-                <CardDescription>Mevcut abonelik planınız ve kullanım limitleriniz.</CardDescription>
+                <CardTitle>Plan and Usage</CardTitle>
+                <CardDescription>Your current subscription plan and usage limits.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
                 <div className="flex justify-between items-center p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50">
                     <div>
                         <p className="font-semibold text-lg">{currentPlan?.name}</p>
-                        <p className="text-sm text-muted-foreground">Aktif Planınız</p>
+                        <p className="text-sm text-muted-foreground">Your Active Plan</p>
                     </div>
-                    {currentPlan?.name !== "Sınırsız" && (
+                    {currentPlan?.name !== "Unlimited" && (
                         <Button asChild>
-                            <Link href="/pricing">Planı Yükselt</Link>
+                            <Link href="/pricing">Upgrade Plan</Link>
                         </Button>
                     )}
                 </div>
@@ -126,25 +126,25 @@ export default function ProfilePage() {
                     <div className="p-4 rounded-lg border">
                         <div className="flex items-center gap-3">
                             <Package className="h-6 w-6 text-muted-foreground" />
-                            <p className="font-semibold">Projeler</p>
+                            <p className="font-semibold">Projects</p>
                         </div>
                         <p className="text-2xl font-bold mt-2">
-                            {userProfile?.projectsCount ?? 0} / {maxProjects === Infinity ? 'Sınırsız' : maxProjects}
+                            {userProfile?.projectsCount ?? 0} / {maxProjects === Infinity ? 'Unlimited' : maxProjects}
                         </p>
                     </div>
                     <div className="p-4 rounded-lg border">
                          <div className="flex items-center gap-3">
                             <Mic className="h-6 w-6 text-muted-foreground" />
-                            <p className="font-semibold">Sesle Oluşturma Kredisi</p>
+                            <p className="font-semibold">Voice Creation Credits</p>
                         </div>
                          <p className="text-2xl font-bold mt-2">
-                           {userProfile?.voiceCreditsUsed ?? 0} / {voiceCredits === 0 ? 'Yok' : voiceCredits}
+                           {userProfile?.voiceCreditsUsed ?? 0} / {voiceCredits === 0 ? 'None' : voiceCredits}
                         </p>
                     </div>
                 </div>
 
                  <div className="space-y-2 pt-4">
-                    <h4 className="font-semibold">Plan Özellikleri:</h4>
+                    <h4 className="font-semibold">Plan Features:</h4>
                     {currentPlan?.features.map((feature, i) => (
                         <div key={i} className="flex items-center gap-2">
                             <CheckCircle2 className="h-5 w-5 text-green-500" />
@@ -157,14 +157,14 @@ export default function ProfilePage() {
 
         <Card className="border-red-200 dark:border-red-900">
           <CardHeader>
-            <CardTitle className="text-red-600">Tehlikeli Bölge</CardTitle>
-            <CardDescription>Bu işlemler geri alınamaz</CardDescription>
+            <CardTitle className="text-red-600">Danger Zone</CardTitle>
+            <CardDescription>These actions cannot be undone</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div>
                 <Button variant="outline" onClick={handleSignOut} className="w-full sm:w-auto">
-                  Çıkış Yap
+                  Sign Out
                 </Button>
               </div>
               <div>
@@ -173,10 +173,10 @@ export default function ProfilePage() {
                   onClick={() => setShowDeleteDialog(true)}
                   className="w-full sm:w-auto"
                 >
-                  Hesabımı Sil
+                  Delete My Account
                 </Button>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                  Hesabınızı silmek tüm verilerinizin kalıcı olarak silinmesine neden olur.
+                  Deleting your account will permanently delete all your data.
                 </p>
               </div>
             </div>
@@ -188,19 +188,19 @@ export default function ProfilePage() {
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Hesabınızı silmek istediğinize emin misiniz?</AlertDialogTitle>
+            <AlertDialogTitle>Are you sure you want to delete your account?</AlertDialogTitle>
             <AlertDialogDescription>
-              Bu işlem geri alınamaz. Tüm projeleriniz ve verileriniz kalıcı olarak silinecektir.
+              This action cannot be undone. All your projects and data will be permanently deleted.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel disabled={isDeleting}>İptal</AlertDialogCancel>
+            <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
             <Button 
               variant="destructive" 
               onClick={handleDeleteAccount}
               disabled={isDeleting}
             >
-              {isDeleting ? 'Siliniyor...' : 'Evet, Hesabımı Sil'}
+              {isDeleting ? 'Deleting...' : 'Yes, Delete My Account'}
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>

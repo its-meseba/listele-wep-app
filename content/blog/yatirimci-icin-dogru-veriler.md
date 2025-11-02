@@ -1,18 +1,18 @@
 ---
-title: "Yatırımcılar İçin Doğru Verilerle Donanmak: Startup'ınızı Finansman İçin Hazırlamak"
-slug: "yatirimci-icin-dogru-veriler"
-excerpt: "Yatırımcıları etkilemek için hangi verileri toplamalısınız? Finansman sürecinde kritik olan metrikleri, sunumu güçlendirecek analizleri ve yatırımcıların aradığı kanıtları nasıl hazırlarsınız?"
+title: "Equipping Yourself with the Right Data for Investors: Preparing Your Startup for Financing"
+slug: "right-data-for-investors-preparing-startup-financing"
+excerpt: "What data should you collect to impress investors? How do you prepare the metrics that are critical in the financing process, analyses that strengthen your presentation, and evidence that investors are looking for?"
 category: "Startup"
-tags: ["yatırımcı sunumu", "startup metrics", "finansman", "pitch deck", "veri analizi", "startup funding"]
+tags: ["investor presentation", "startup metrics", "financing", "pitch deck", "data analysis", "startup funding"]
 author:
-  name: "listelee.lumiostudio.co"
-  email: "info@listelee.lumiostudio.co"
+  name: "first100.lumiostudio.co"
+  email: "info@first100.lumiostudio.co"
 publishedAt: "2025-07-29T10:00:00Z"
 readingTime: 12
 seo:
-  title: "Startup Yatırımcı Sunumu: Hangi Veriler ve Metrikler Gerekli?"
-  description: "Yatırımcılar için startup'ınızı doğru verilerle nasıl sunacağınızı öğrenin. Kritik metrikler, finansal projeksiyonlar ve pitch deck hazırlama rehberi."
-  keywords: ["startup yatırımcı sunumu", "pitch deck", "startup metrics", "finansman alma", "yatırımcı verileri", "startup funding", "girişim sermayesi"]
+  title: "Startup Investor Presentation: What Data and Metrics Are Needed?"
+  description: "Learn how to present your startup to investors with the right data. Critical metrics, financial projections, and pitch deck preparation guide."
+  keywords: ["startup investor presentation", "pitch deck", "startup metrics", "getting financing", "investor data", "startup funding", "venture capital"]
 ---
 
 # Yatırımcılar İçin Doğru Verilerle Donanmak: Startup'ınızı Finansman İçin Hazırlamak
@@ -420,6 +420,6 @@ Yatırımcılarla olan ilişkinizde:
 
 ---
 
-**Yatırımcı sunum sürecinize hazır mısınız?** [listelee.lumiostudio.co](/) ile **açılış sayfanızdan (landing page)** başlayarak ilk traction verilerinizi toplamaya başlayın!
+**Yatırımcı sunum sürecinize hazır mısınız?** [first100.lumiostudio.co](/) ile **açılış sayfanızdan (landing page)** başlayarak ilk traction verilerinizi toplamaya başlayın!
 
 *Bu rehber startup'ınızın finansman sürecine katkı sağladıysa, diğer girişimcilerle paylaşmayı unutmayın! 💼* 

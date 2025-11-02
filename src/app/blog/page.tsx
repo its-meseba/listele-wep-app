@@ -4,36 +4,36 @@ import type { Metadata } from 'next';
 import { APP_URL } from '~/lib/config';
 
 export const metadata: Metadata = {
-  title: 'Blog - Girişimcilik, Startup ve Teknoloji İçerikleri | listelee.lumiostudio.co',
-  description: 'Girişimcilik, startup dünyası, teknoloji trendleri ve proje geliştirme hakkında uzman içerikleri. listelee.lumiostudio.co blog\'da sektörün en güncel bilgilerini keşfedin.',
+  title: 'Blog - Entrepreneurship, Startup and Technology Content | first100.lumiostudio.co',
+  description: 'Expert content on entrepreneurship, startup world, technology trends and project development. Discover the latest industry insights on First100 Blog.',
   keywords: [
-    'girişimcilik blog',
+    'entrepreneurship blog',
     'startup blog',
-    'teknoloji blog',
-    'proje geliştirme',
-    'landing page rehberi',
-    'startup tavsiyeleri',
-    'girişimci hikayeler',
-    'teknoloji haberleri',
-    'iş fikri geliştirme',
-    'mvp oluşturma'
+    'technology blog',
+    'project development',
+    'landing page guide',
+    'startup advice',
+    'entrepreneur stories',
+    'technology news',
+    'business idea development',
+    'mvp creation'
   ].join(', '),
   alternates: {
     canonical: '/blog',
   },
   openGraph: {
-    title: 'Blog - Girişimcilik ve Startup İçerikleri | listelee.lumiostudio.co',
-    description: 'Girişimcilik, startup dünyası ve teknoloji trendleri hakkında uzman içerikleri keşfedin.',
+    title: 'Blog - Entrepreneurship and Startup Content | first100.lumiostudio.co',
+    description: 'Discover expert content on entrepreneurship, startup world and technology trends.',
     url: `${APP_URL}/blog`,
-    siteName: 'listelee.lumiostudio.co',
+    siteName: 'first100.lumiostudio.co',
     images: [`${APP_URL}/opengraph-image.png`],
-    locale: 'tr_TR',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - Girişimcilik ve Startup İçerikleri | listelee.lumiostudio.co',
-    description: 'Girişimcilik, startup dünyası ve teknoloji trendleri hakkında uzman içerikleri keşfedin.',
+    title: 'Blog - Entrepreneurship and Startup Content | first100.lumiostudio.co',
+    description: 'Discover expert content on entrepreneurship, startup world and technology trends.',
     images: [`${APP_URL}/twitter-image.png`],
   },
   robots: {
@@ -64,13 +64,13 @@ export default async function BlogPage() {
   const blogStructuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "listelee.lumiostudio.co Blog",
-    "description": "Girişimcilik, startup dünyası ve teknoloji trendleri hakkında uzman içerikleri",
+    "name": "First100 Blog",
+    "description": "Expert content on entrepreneurship, startup world and technology trends",
     "url": `${APP_URL}/blog`,
-    "inLanguage": "tr",
+    "inLanguage": "en",
     "publisher": {
       "@type": "Organization",
-      "name": "listelee.lumiostudio.co",
+      "name": "first100.lumiostudio.co",
       "url": APP_URL,
       "logo": `${APP_URL}/Logo.png`
     },
@@ -91,7 +91,7 @@ export default async function BlogPage() {
       },
       "publisher": {
         "@type": "Organization",
-        "name": "listelee.lumiostudio.co",
+        "name": "first100.lumiostudio.co",
         "url": APP_URL
       }
     }))

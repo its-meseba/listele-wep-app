@@ -1,18 +1,18 @@
 ---
-title: "Mobil Uyumlu Landing Page: Mobile-First Tasarım Rehberi"
-slug: "mobil-uyumlu-landing-page-mobile-responsive-design"
-excerpt: "Landing page'iniz mobil cihazlarda bozuk mu görünüyor? Mobil-first tasarım prensipleriyle tüm cihazlarda mükemmel görünüm sağlayın. Responsive design, UX ve performans optimizasyonu."
-category: "Mobil"
-tags: ["mobil tasarım", "responsive design", "mobile-first", "UX", "landing page", "mobil optimizasyon"]
+title: "Mobile-Friendly Landing Page: Mobile-First Design Guide"
+slug: "mobile-friendly-landing-page-mobile-first-design"
+excerpt: "Does your landing page look broken on mobile devices? Provide perfect appearance on all devices with mobile-first design principles. Responsive design, UX, and performance optimization."
+category: "Mobile"
+tags: ["mobile design", "responsive design", "mobile-first", "UX", "landing page", "mobile optimization"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-21T10:00:00Z"
 readingTime: 8
 seo:
-  title: "Mobil Uyumlu Landing Page Tasarımı - Mobile-First Rehberi"
-  description: "Mobil uyumlu landing page yapmak mı istiyorsunuz? Mobile-first tasarım prensipleri, responsive design teknikleri ve UX optimizasyon yöntemleri burada."
-  keywords: ["mobil uyumlu landing page", "responsive design", "mobile-first", "mobil optimizasyon", "landing page tasarımı", "mobil UX"]
+  title: "Mobile-Friendly Landing Page Design - Mobile-First Guide"
+  description: "Want to make a mobile-friendly landing page? Mobile-first design principles, responsive design techniques, and UX optimization methods here."
+  keywords: ["mobile-friendly landing page", "responsive design", "mobile-first", "mobile optimization", "landing page design", "mobile UX"]
 ---
 
 # Mobil Uyumlu Landing Page: Mobile-First Tasarım Rehberi

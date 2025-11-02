@@ -1,18 +1,18 @@
 ---
-title: "Landing Page Performansı Nasıl Ölçülür? Analytics Rehberi"
-slug: "landing-page-performansi-nasil-olculur-analytics"
-excerpt: "Landing page'iniz çalışıyor mu? Analytics araçları, KPI'lar ve performans ölçüm yöntemleriyle veriye dayalı kararlar alın. Dönüşüm optimizasyonu için olmazsa olmaz metrikler."
+title: "How to Measure Landing Page Performance? Analytics Guide"
+slug: "how-to-measure-landing-page-performance-analytics"
+excerpt: "Is your landing page working? Make data-driven decisions with analytics tools, KPIs, and performance measurement methods. Essential metrics for conversion optimization."
 category: "Analytics"
-tags: ["analytics", "landing page performansı", "KPI", "dönüşüm optimizasyonu", "veri analizi", "performance tracking"]
+tags: ["analytics", "landing page performance", "KPI", "conversion optimization", "data analysis", "performance tracking"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-23T10:00:00Z"
 readingTime: 9
 seo:
-  title: "Landing Page Performansı Nasıl Ölçülür - Analytics Rehberi"
-  description: "Landing page performansını nasıl ölçeceğinizi öğrenin. Analytics araçları, KPI'lar ve veriye dayalı optimizasyon yöntemleriyle dönüşüm oranınızı artırın."
-  keywords: ["landing page performansı", "analytics", "KPI ölçümü", "dönüşüm optimizasyonu", "veri analizi", "performance metrics"]
+  title: "How to Measure Landing Page Performance - Analytics Guide"
+  description: "Learn how to measure landing page performance. Increase your conversion rate with analytics tools, KPIs, and data-driven optimization methods."
+  keywords: ["landing page performance", "analytics", "KPI measurement", "conversion optimization", "data analysis", "performance metrics"]
 ---
 
 # Landing Page Performansı Nasıl Ölçülür? Analytics Rehberi

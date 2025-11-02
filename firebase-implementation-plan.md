@@ -1,7 +1,7 @@
-# Firebase/Firestore Implementation Plan for listelee.lumiostudio.co
+# Firebase/Firestore Implementation Plan for first100.lumiostudio.co
 
 ## Overview
-This document outlines the Firebase/Firestore integration plan for the listele.io waitlist platform, including authentication, database structure, and feature implementations.
+This document outlines the Firebase/Firestore integration plan for the first100.lumiostudio.co waitlist platform, including authentication, database structure, and feature implementations.
 
 ## 1. Authentication System
 

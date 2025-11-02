@@ -6,7 +6,7 @@ import { getAllBlogPosts } from '~/lib/blog'
 // Define categories for SEO category pages
 const CATEGORIES = [
   'e-commerce',
-  'saas',
+  'saas', 
   'local-business',
   'consulting',
   'education',
@@ -19,23 +19,23 @@ const CATEGORIES = [
 
 // Static pages with optimized SEO settings
 const STATIC_PAGES = [
-  {
-    url: APP_URL,
+    {
+      url: APP_URL,
     changeFrequency: 'weekly' as const,
     priority: 1.0,
-  },
-  {
-    url: `${APP_URL}/pricing`,
+    },
+    {
+      url: `${APP_URL}/pricing`,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
-  },
-  {
-    url: `${APP_URL}/showcase`,
+    },
+    {
+      url: `${APP_URL}/showcase`,
     changeFrequency: 'daily' as const,
     priority: 0.8,
-  },
-  {
-    url: `${APP_URL}/blog`,
+    },
+    {
+      url: `${APP_URL}/blog`,
     changeFrequency: 'daily' as const,
     priority: 0.8,
   },
@@ -43,13 +43,13 @@ const STATIC_PAGES = [
     url: `${APP_URL}/onboarding`,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
-  },
-  {
-    url: `${APP_URL}/login`,
+    },
+    {
+      url: `${APP_URL}/login`,
     changeFrequency: 'yearly' as const,
-    priority: 0.3,
-  },
-  {
+      priority: 0.3,
+    },
+    {
     url: `${APP_URL}/success`,
     changeFrequency: 'yearly' as const,
     priority: 0.4,
@@ -63,8 +63,8 @@ const STATIC_PAGES = [
     url: `${APP_URL}/payment-fail`,
     changeFrequency: 'yearly' as const,
     priority: 0.2,
-  },
-];
+    },
+  ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -97,24 +97,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         let lastModified = now;
 
         // Determine lastModified from various timestamp sources
-        if (project.updatedAt) {
-          if (typeof project.updatedAt === 'object' && 'seconds' in project.updatedAt) {
-            lastModified = new Date(project.updatedAt.seconds * 1000);
-          } else if (typeof project.updatedAt === 'number') {
+      if (project.updatedAt) {
+        if (typeof project.updatedAt === 'object' && 'seconds' in project.updatedAt) {
+          lastModified = new Date(project.updatedAt.seconds * 1000);
+        } else if (typeof project.updatedAt === 'number') {
             lastModified = new Date(project.updatedAt);
           } else if (typeof project.updatedAt === 'string') {
-            lastModified = new Date(project.updatedAt);
-          }
-        } else if (project.createdAt) {
-          if (typeof project.createdAt === 'object' && 'seconds' in project.createdAt) {
-            lastModified = new Date(project.createdAt.seconds * 1000);
-          } else if (typeof project.createdAt === 'number') {
-            lastModified = new Date(project.createdAt);
+          lastModified = new Date(project.updatedAt);
+        }
+      } else if (project.createdAt) {
+        if (typeof project.createdAt === 'object' && 'seconds' in project.createdAt) {
+          lastModified = new Date(project.createdAt.seconds * 1000);
+        } else if (typeof project.createdAt === 'number') {
+          lastModified = new Date(project.createdAt);
           } else if (typeof project.createdAt === 'string') {
             lastModified = new Date(project.createdAt);
-          }
         }
-
+      }
+      
         // Enhanced priority calculation based on multiple factors
         let priority = 0.6; // Base priority for projects
         let changeFrequency: 'daily' | 'weekly' | 'monthly' = 'weekly';
@@ -145,24 +145,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const daysSinceModified = (now.getTime() - lastModified.getTime()) / (1000 * 60 * 60 * 24);
         if (daysSinceModified < 30) {
           priority = Math.min(priority + 0.1, 0.9);
-        }
-
-        return {
-          url: `${APP_URL}/${project.slug}`,
-          lastModified,
+      }
+      
+      return {
+        url: `${APP_URL}/${project.slug}`,
+        lastModified,
           changeFrequency,
-          priority,
-        };
-      });
+        priority,
+      };
+    });
 
     // Process blog post pages with enhanced metadata
     const blogPages: MetadataRoute.Sitemap = blogPosts
       .filter(post => post.slug) // Ensure post has a slug
       .map((post) => {
         let lastModified = now;
-
-        if (post.updatedAt) {
-          lastModified = new Date(post.updatedAt);
+      
+      if (post.updatedAt) {
+        lastModified = new Date(post.updatedAt);
         } else if (post.publishedAt) {
           lastModified = new Date(post.publishedAt);
         }
@@ -190,15 +190,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         // Featured or popular posts get higher priority (if we had view counts)
         // For now, we'll assume all published posts are important
-
-        return {
-          url: `${APP_URL}/blog/${post.slug}`,
-          lastModified,
+      
+      return {
+        url: `${APP_URL}/blog/${post.slug}`,
+        lastModified,
           changeFrequency,
           priority,
-        };
-      });
-
+      };
+    });
+    
     // Combine all pages and sort by priority (highest first) for better SEO
     const allPages = [...staticPages, ...categoryPages, ...projectPages, ...blogPages]
       .sort((a, b) => (b.priority || 0) - (a.priority || 0));

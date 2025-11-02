@@ -1,65 +1,65 @@
 ---
-title: "İş Fikrinizi Projeye Dönüştürmeden Önce Form ile Doğrulayın"
-slug: "form-ile-is-fikri-dogrulama"
-excerpt: "Zaman ve kaynağınızı boşa harcamayın! İş fikrinizi geliştirmeden önce gerçek müşteri geri bildirimlerini toplayarak risk alın. Form tabanlı doğrulama yöntemleri ile başarı şansınızı artırın."
-category: "Girişimcilik"
-tags: ["iş fikri doğrulama", "mvp", "müşteri geri bildirimi", "startup", "form", "landing page"]
+title: "Validate Your Business Idea with Forms Before Turning It into a Project"
+slug: "validate-business-idea-with-forms"
+excerpt: "Don't waste your time and resources! Reduce risk by collecting real customer feedback before developing your business idea. Increase your chances of success with form-based validation methods."
+category: "Entrepreneurship"
+tags: ["business idea validation", "mvp", "customer feedback", "startup", "form", "landing page"]
 author:
-  name: "listelee.lumiostudio.co"
-  email: "info@listelee.lumiostudio.co"
+  name: "first100.lumiostudio.co"
+  email: "info@first100.lumiostudio.co"
 publishedAt: "2025-07-15T10:00:00Z"
 readingTime: 8
 seo:
-  title: "İş Fikri Doğrulama: Form ile Müşteri Geri Bildirimi Alma Rehberi"
-  description: "İş fikrinizi projeye dönüştürmeden önce form ile nasıl doğrulayacağınızı öğrenin. Müşteri geri bildirimi alma, risk azaltma ve başarı şansını artırma stratejileri."
-  keywords: ["iş fikri doğrulama", "startup doğrulama", "müşteri geri bildirimi", "mvp geliştirme", "form ile doğrulama", "girişimcilik", "business validation"]
+  title: "Business Idea Validation: Guide to Getting Customer Feedback with Forms"
+  description: "Learn how to validate your business idea with forms before turning it into a project. Customer feedback collection, risk reduction, and success chance improvement strategies."
+  keywords: ["business idea validation", "startup validation", "customer feedback", "mvp development", "form validation", "entrepreneurship", "business validation"]
 ---
 
-# İş Fikrinizi Projeye Dönüştürmeden Önce Form ile Doğrulayın
+# Validate Your Business Idea with Forms Before Turning It into a Project
 
-Girişimcilik dünyasında en büyük hatalardan biri, müşterilerle konuşmadan ürün geliştirmeye başlamaktır. **Harvard Business School**'un araştırmalarına göre, startupların %42'si müşteri ihtiyacı olmayan ürünler geliştirdiği için başarısız oluyor.
+One of the biggest mistakes in the entrepreneurship world is starting product development without talking to customers. According to **Harvard Business School** research, 42% of startups fail because they develop products that customers don't need.
 
-Peki bu riski nasıl azaltabilirsiniz? Cevap basit: **Form tabanlı doğrulama**.
+So how can you reduce this risk? The answer is simple: **Form-based validation**.
 
-## 🎯 Form ile Doğrulama Nedir?
+## 🎯 What is Form Validation?
 
-Form ile doğrulama, iş fikrinizi henüz geliştirmeden önce potansiyel müşterilerden geri bildirim toplamak için basit formlar kullanmanızdır. Bu yöntem:
+Form validation is using simple forms to collect feedback from potential customers before developing your business idea. This method:
 
-- ✅ **Düşük maliyetli** - Kodlama gerektirmez
-- ✅ **Hızlı** - Birkaç saatte kurulabilir  
-- ✅ **Etkili** - Gerçek veri sağlar
-- ✅ **Risk azaltır** - Yanlış yöne gitmeyi önler
+- ✅ **Low-cost** - No coding required
+- ✅ **Fast** - Can be set up in a few hours
+- ✅ **Effective** - Provides real data
+- ✅ **Risk-reducing** - Prevents going in the wrong direction
 
-## 📊 Neden Form ile Başlamalısınız?
+## 📊 Why Should You Start with Forms?
 
-### 1. **Zaman ve Para Tasarrufu**
-Bir mobil uygulama geliştirmek 6 ay ve 50.000 TL alabilir. Ancak bir **açılış sayfası (landing page)** ile form oluşturmak sadece 1 gün ve neredeyse hiç maliyet gerektirmez.
+### 1. **Time and Cost Savings**
+Developing a mobile app can take 6 months and ₺50,000. However, creating a **landing page** with a form takes only 1 day and almost no cost.
 
-### 2. **Gerçek Verilerle Karar Verme**  
-"Kesinlikle kullanırım" diyen arkadaşlarınızın yorumları yerine, gerçek müşterilerin e-posta adreslerini vererek gösterdikleri ilgi çok daha değerlidir.
+### 2. **Decision Making with Real Data**
+The interest shown by real customers who provide their email addresses is much more valuable than comments from friends saying "I would definitely use it."
 
-### 3. **Erken Müşteri Listesi Oluşturma**
-Doğrulama sürecinde toplanan e-postalar, ürününüzü piyasaya sürdüğünüzde ilk müşteri grubunuzu oluşturur.
+### 3. **Building an Early Customer List**
+The emails collected during the validation process form your first customer group when you launch your product.
 
-## 🚀 Etkili Doğrulama Formu Nasıl Oluşturulur?
+## 🚀 How to Create an Effective Validation Form?
 
-### 1. **Problem Odaklı Başlık**
-❌ Kötü: "Yeni Uygulamamız Hakkında"  
-✅ İyi: "Spor Salonu Randevusu Almakta Zorlanıyor musunuz?"
+### 1. **Problem-Focused Headline**
+❌ Bad: "About Our New App"
+✅ Good: "Having Trouble Booking Gym Appointments?"
 
-### 2. **Değer Proposisyonu**
-Müşteriye ne fayda sağlayacağınızı net bir şekilde belirtin:
-> "Sadece 30 saniyede spor salonu randevunuzu alın, kuyruklarda beklemekten kurtulun"
+### 2. **Value Proposition**
+Clearly state what benefit you'll provide to the customer:
+> "Book your gym appointment in just 30 seconds, avoid waiting in queues"
 
-### 3. **Sosyal Kanıt**
-- "500+ kullanıcı kayıt oldu"  
-- "İstanbul'un en popüler 25 spor salonuyla anlaşmalıyız"
-- Müşteri yorumları (varsa)
+### 3. **Social Proof**
+- "500+ users registered"
+- "We have partnerships with Istanbul's 25 most popular gyms"
+- Customer testimonials (if available)
 
-### 4. **Açık ve Net Eylem Çağrısı (CTA – Call to Action)**
-❌ "Bilgi Al"  
-✅ "Erken Erişim Listesine Katıl"  
-✅ "İlk Kullanıcılar Arasında Ol"
+### 4. **Clear and Direct Call to Action (CTA)**
+❌ "Get Information"
+✅ "Join Early Access List"
+✅ "Be Among the First Users"
 
 ## 📝 Form Alanları: Neyi Sormalısınız?
 
@@ -119,7 +119,7 @@ Arkadaşlarınız size "hayır" demekte zorlanır. Gerçek müşterilerle test e
 ## 🛠️ Araçlar ve Platformlar
 
 ### **Hızlı Başlangıç İçin:**
-- **listelee.lumiostudio.co**: Özelleştirilmiş açılış sayfası (landing page) + form
+- **first100.lumiostudio.co**: Özelleştirilmiş açılış sayfası (landing page) + form
 - **Typeform**: Etkileşimli formlar
 - **Google Forms**: Basit ve ücretsiz
 
@@ -137,14 +137,14 @@ Form ile doğrulama yaptıktan sonra:
 3. **MVP Planlayın**: En kritik özelliklerle başlayın  
 4. **Betas Test Grubu Oluşturun**: Form dolduranlar ilk test kullanıcılarınız olsun
 
-## 💡 Önemli Hatırlatma
+## 💡 Important Reminder
 
-> "En iyi ürün, müşterilerin gerçekten istediği üründür. Bunu öğrenmenin en hızlı yolu onlara sormaktır."
+> "The best product is what customers really want. The fastest way to learn this is to ask them."
 
-Form ile doğrulama, girişimciliğin en değerli araçlarından biridir. Büyük yatırımlar yapmadan önce küçük adımlarla test edin, öğrenin ve adapte olun.
+Form validation is one of the most valuable tools in entrepreneurship. Test, learn, and adapt with small steps before making big investments.
 
 ---
 
-**Hemen başlamak ister misiniz?** [listelee.lumiostudio.co](/) ile dakikalar içinde profesyonel bir doğrulama formu oluşturun ve iş fikrinizin gerçek potansiyelini keşfedin!
+**Want to start immediately?** Create a professional validation form in minutes with [first100.lumiostudio.co](/) and discover the real potential of your business idea!
 
-*Bu makale faydalı olduysa, sosyal medyada paylaşmayı unutmayın! 🚀* 
+*If this article was helpful, don't forget to share it on social media! 🚀* 

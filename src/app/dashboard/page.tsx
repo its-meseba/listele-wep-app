@@ -39,7 +39,7 @@ export default function DashboardPage() {
           setProjects(userProjects);
         } catch (error) {
           console.error("Error fetching user data:", error);
-          toast.error("Veriler yüklenirken bir hata oluştu.");
+          toast.error("An error occurred while loading data.");
         }
       } else {
         router.push("/login");
@@ -61,10 +61,10 @@ export default function DashboardPage() {
     try {
       await deleteProject(projectToDelete);
       setProjects(projects.filter(p => p.id !== projectToDelete));
-      toast.success("Proje başarıyla silindi.");
+      toast.success("Project deleted successfully.");
     } catch (error) {
       console.error("Error deleting project:", error);
-      toast.error("Proje silinirken bir hata oluştu.");
+      toast.error("An error occurred while deleting the project.");
     } finally {
       setIsDeleting(false);
       setProjectToDelete(null);
@@ -74,7 +74,7 @@ export default function DashboardPage() {
   if (loading) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-white dark:bg-slate-900">
-        <p className="text-black dark:text-white">Yükleniyor...</p>
+        <p className="text-black dark:text-white">Loading...</p>
       </main>
     );
   }
@@ -86,19 +86,19 @@ export default function DashboardPage() {
     <div className="container mx-auto p-4 sm:p-6 lg:p-8 text-black dark:text-white">
       <div className="flex flex-col md:flex-row justify-between md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-bold">Projelerim</h1>
-          <p className="text-gray-600 dark:text-gray-400">Mevcut projelerinizi yönetin ve yenilerini oluşturun.</p>
+          <h1 className="text-3xl font-bold">My Projects</h1>
+          <p className="text-gray-600 dark:text-gray-400">Manage your existing projects and create new ones.</p>
         </div>
         <div className="flex flex-col items-end">
             <Link href="/dashboard/editor/new">
               <Button disabled={!canCreateProject} className="bg-[#D8FF00] hover:bg-[#B8E000] text-black">
                 <PlusCircle className="mr-2 h-4 w-4" />
-                Yeni Proje Oluştur
+                Create New Project
               </Button>
             </Link>
             {!canCreateProject && (
               <p className="text-sm text-red-500 mt-2 text-right">
-                Proje limitinize ulaştınız. <Link href="/pricing" className="underline font-semibold">Plan Yükselt</Link>
+                You've reached your project limit. <Link href="/pricing" className="underline font-semibold">Upgrade Plan</Link>
               </p>
             )}
         </div>
@@ -164,12 +164,12 @@ export default function DashboardPage() {
           ))
         ) : (
           <div className="col-span-full text-center p-12 border-2 border-dashed rounded-lg border-gray-300 dark:border-slate-700">
-            <h3 className="text-xl font-semibold text-black dark:text-white">İlk projenizi oluşturun</h3>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 mb-4">Harika fikirlerinizi hayata geçirme zamanı.</p>
+            <h3 className="text-xl font-semibold text-black dark:text-white">Create your first project</h3>
+            <p className="text-gray-600 dark:text-gray-400 mt-2 mb-4">Time to bring your great ideas to life.</p>
             <Link href="/dashboard/editor/new">
               <Button className="bg-[#D8FF00] hover:bg-[#B8E000] text-black">
                 <PlusCircle className="mr-2 h-4 w-4" />
-                Proje Oluştur
+                Create Project
               </Button>
             </Link>
           </div>
@@ -180,16 +180,16 @@ export default function DashboardPage() {
       <section className="mt-16 text-center">
         <div className="bg-[#D8FF00] rounded-xl p-8 text-black">
           <h3 className="text-2xl font-bold mb-4">
-            🌟 Başarılı Projelerden İlham Al!
+            🌟 Get Inspired by Successful Projects!
           </h3>
           <p className="text-black/80 mb-6 max-w-2xl mx-auto">
-            listelee.lumiostudio.co ile hayata geçirilmiş projelerden öğren ve kendi başarı hikayeni oluştur.
+            Learn from projects built with First100 and create your own success story.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/showcase">
               <Button size="lg" className="bg-white text-black hover:bg-gray-100">
                 <Eye className="w-5 h-5 mr-2" />
-                Proje Galerisini Keşfet
+                Explore Project Gallery
               </Button>
             </Link>
           </div>
@@ -204,20 +204,20 @@ export default function DashboardPage() {
       <AlertDialog open={!!projectToDelete} onOpenChange={(open) => !open && setProjectToDelete(null)}>
         <AlertDialogContent className="bg-white dark:bg-slate-900 border-gray-200 dark:border-slate-700">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-black dark:text-white">Projeyi Sil</AlertDialogTitle>
+            <AlertDialogTitle className="text-black dark:text-white">Delete Project</AlertDialogTitle>
             <AlertDialogDescription className="dark:text-gray-400">
-              Bu işlem geri alınamaz. Projeyi ve ilişkili tüm verileri kalıcı olarak silmek istediğinizden emin misiniz?
+              This action cannot be undone. Are you sure you want to permanently delete this project and all associated data?
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel disabled={isDeleting} onClick={() => setProjectToDelete(null)} className="border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700">İptal</AlertDialogCancel>
+            <AlertDialogCancel disabled={isDeleting} onClick={() => setProjectToDelete(null)} className="border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700">Cancel</AlertDialogCancel>
             <Button
               variant="destructive"
               disabled={isDeleting}
               onClick={handleDeleteProject}
               className="bg-red-500 hover:bg-red-600 text-white"
             >
-              {isDeleting ? "Siliniyor..." : "Evet, Sil"}
+              {isDeleting ? "Deleting..." : "Yes, Delete"}
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>

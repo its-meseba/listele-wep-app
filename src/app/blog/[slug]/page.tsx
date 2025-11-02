@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: 'Blog Yazısı Bulunamadı - listelee.lumiostudio.co Blog',
+      title: 'Blog Yazısı Bulunamadı - First100 Blog',
       description: 'Aradığınız blog yazısı bulunamadı. Diğer yazılarımızı keşfetmek için blog sayfamızı ziyaret edin.',
     };
   }
@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const modifiedDate = new Date(post.updatedAt);
 
   return {
-    title: post.seo.title || `${post.title} | listelee.lumiostudio.co Blog`,
+    title: post.seo.title || `${post.title} | First100 Blog`,
     description: post.seo.description || post.excerpt,
     keywords: post.seo.keywords.join(', '),
     authors: [{ name: post.author.name, url: `${APP_URL}/blog` }],
     creator: post.author.name,
-    publisher: 'listelee.lumiostudio.co',
+    publisher: 'first100.lumiostudio.co',
     category: post.category,
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.seo.title || post.title,
       description: post.seo.description || post.excerpt,
       url: `${APP_URL}/blog/${post.slug}`,
-      siteName: 'listelee.lumiostudio.co',
+      siteName: 'first100.lumiostudio.co',
       images: post.featuredImage ? [post.featuredImage] : [`${APP_URL}/opengraph-image.png`],
       locale: 'tr_TR',
       type: 'article',
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "listelee.lumiostudio.co",
+      "name": "first100.lumiostudio.co",
       "url": APP_URL,
       "logo": {
         "@type": "ImageObject",
@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: Props) {
     "inLanguage": "tr",
     "isPartOf": {
       "@type": "Blog",
-      "name": "listelee.lumiostudio.co Blog",
+      "name": "First100 Blog",
       "@id": `${APP_URL}/blog`
     },
     "interactionStatistic": {

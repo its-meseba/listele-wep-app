@@ -14,79 +14,145 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-white dark:bg-slate-900">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
+        {/* Animated background elements */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-10"
+          className="absolute inset-0 overflow-hidden"
         >
-          <div className="blur-[106px] h-56 bg-[#D8FF00] dark:bg-[#D8FF00]/30" />
-          <div className="blur-[106px] h-32 bg-[#D8FF00] dark:bg-[#D8FF00]/30" />
+          <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#D8FF00] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse" />
+          <div className="absolute top-1/3 -right-48 w-96 h-96 bg-[#D8FF00] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse delay-1000" />
+          <div className="absolute -bottom-48 left-1/2 w-96 h-96 bg-[#D8FF00] rounded-full mix-blend-multiply filter blur-[128px] opacity-10 animate-pulse delay-500" />
         </div>
-        <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-          <div className="relative pt-36 ml-auto">
-            <div className="lg:w-2/3 text-center mx-auto">
+
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 xl:px-6 py-20">
+          <div className="text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="space-y-8"
               >
-                <h1 className="text-black dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl leading-tight">
-                  Müşterini Önce <span className="text-[#D8FF00]">Topla.</span>
-                </h1>
-
-                <div className="mt-6">
-                  <p className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-                    Fikrini Listelee, Bekleyenlerini Topla.
-                  </p>
-                </div>
-
-                <p className="mt-6 text-gray-900 dark:text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                  <strong className="text-black dark:text-white">Ürününü geliştirmeden önce müşterini bul.</strong> Listelee ile dakikalar içinde bekleme listesi sayfası kur,
-                  <strong className="text-black dark:text-white"> gerçek talebi ölç</strong>,
-                  <strong className="text-black dark:text-white"> ilk geri bildirimleri topla</strong> ve
-                  <strong className="text-black dark:text-white"> seni bekleyen bir kitleyle motive ol.</strong>
-                  Müşterisi olmayan ürüne emek verme.
-                </p>
-
-                <div className="mt-8 flex flex-wrap justify-center gap-2 text-sm">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-gray-200 font-medium">
-                    📮 Bekleme Listesi
+              {/* Social proof badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium"
+              >
+                <span className="flex items-center gap-1">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D8FF00] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D8FF00]"></span>
                   </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-gray-200 font-medium">
-                    📊 Pazar Doğrulaması
+                  1,000+ founders already building
                   </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-gray-200 font-medium">
-                    🔥 Ürün Motivasyonu
-                  </span>
-                </div>
+              </motion.div>
 
-                <div className="mt-12 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                  <Link href={paymentEnabled ? "/onboarding" : "/dashboard"}>
-                    <Button size="lg" className="relative w-full sm:w-auto bg-[#D8FF00] hover:bg-[#B8E000] text-black font-bold text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all">
-                      🚀 Ücretsiz Başla
+              <h1 className="text-white font-bold text-5xl md:text-6xl xl:text-8xl leading-tight tracking-tight">
+                Get your first <span className="text-[#D8FF00] inline-block hover:scale-105 transition-transform">100 users</span>
+                <br />
+                <span className="text-white/90">before you build.</span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                AI builds your waitlist page in 60 seconds. 
+                <br className="hidden sm:block" />
+                <span className="text-[#D8FF00] font-semibold">Start collecting leads today—no code, no hassle.</span>
+              </p>
+
+              {/* CTA Section with urgency */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="mt-12 space-y-6"
+              >
+                {/* Primary CTA with attention-grabbing design */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Link href={paymentEnabled ? "/onboarding" : "/dashboard"} className="w-full sm:w-auto">
+                    <Button 
+                      size="lg" 
+                      className="group relative w-full sm:w-auto bg-[#D8FF00] hover:bg-[#B8E000] text-black font-bold text-xl px-12 py-6 shadow-2xl hover:shadow-[#D8FF00]/50 transition-all duration-300 hover:scale-105 rounded-xl overflow-hidden"
+                    >
+                      <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                      <span className="relative flex items-center gap-2">
+                        🚀 Create Your Waitlist Free
+                  </span>
                     </Button>
                   </Link>
+                  
                   {paymentEnabled && (
                     <Button
                       variant="outline"
                       size="lg"
                       onClick={() => setIsVoiceModalOpen(true)}
-                      className="relative w-full sm:w-auto group border-2 border-[#D8FF00] text-black dark:text-white hover:bg-[#D8FF00]/10 dark:hover:bg-[#D8FF00]/20 font-semibold text-lg px-8 py-4"
+                      className="w-full sm:w-auto group border-2 border-white/30 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-[#D8FF00] font-semibold text-lg px-8 py-6 rounded-xl transition-all duration-300"
                     >
                       <Mic className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                      Sesle Proje Oluştur
+                      Try Voice Mode
                     </Button>
                   )}
                 </div>
 
-                <div className="mt-8 text-sm text-gray-800 dark:text-gray-400">
-                  💳 Kredi kartı gerektirmez • 🎯 2 proje + 75 form ücretsiz • ⭐ Dakikalar içinde test et
+                {/* Trust indicators with icons */}
+                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#D8FF00]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-white font-medium">Free forever plan</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#D8FF00]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-white font-medium">No credit card</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#D8FF00]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-white font-medium">Live in 60 seconds</span>
+                  </div>
                 </div>
               </motion.div>
+
+              {/* Urgency/scarcity element */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="mt-8 inline-block"
+              >
+                <div className="px-6 py-3 rounded-full bg-gradient-to-r from-[#D8FF00]/20 to-transparent border border-[#D8FF00]/30 backdrop-blur-sm">
+                  <p className="text-[#D8FF00] text-sm font-semibold flex items-center gap-2">
+                    <span className="text-lg">⚡</span>
+                    Limited time: Get Pro features free for 30 days
+                  </p>
             </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <div className="flex flex-col items-center gap-2 text-white/50">
+            <span className="text-xs uppercase tracking-wider">Scroll to explore</span>
+            <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </motion.div>
       </section>
 
       {paymentEnabled && (

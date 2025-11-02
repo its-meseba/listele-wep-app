@@ -382,14 +382,14 @@ export default function BlogPostClient({ post, recentPosts }: BlogPostClientProp
               <Card className="border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800">
                 <CardContent className="p-4 sm:p-6 text-center">
                   <h4 className="font-bold text-sm sm:text-base text-black dark:text-white mb-2">
-                    🚀 Kendi Projenizi Oluşturun!
+                    🚀 Create Your Own Project!
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4">
-                    Blog'da edindiğiniz bilgileri pratiğe dökün ve kendi landing page'inizi oluşturun.
+                    Put the knowledge you've gained from the blog into practice and create your own landing page.
                   </p>
                   <Link href="/onboarding">
                     <Button className="w-full text-xs sm:text-sm bg-[#D8FF00] hover:bg-[#B8E000] text-black">
-                      Hemen Başla
+                      Get Started
                     </Button>
                   </Link>
                 </CardContent>

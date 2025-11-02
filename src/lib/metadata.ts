@@ -1,14 +1,17 @@
 import { APP_URL } from './config'
 
 export const siteConfig = {
-  name: "listelee.lumiostudio.co",
-  description: "Girişimciler için bekleme listesi platformu. Fikrini lansmandan önce doğrula, müşterilerini topla ve ürünü güvenle inşa et.",
-  shortDescription: "Bekleme listesiyle fikrini lansmandan önce doğrula.",
+  name: "First100",
+  description: "AI waitlist pages that collect leads and measure intent. Add images & video (Pro). Launch in minutes.",
+  shortDescription: "Get your first 100 users before you build.",
   keywords: [
-    "bekleme listesi",
     "waitlist",
-    "lansman bekleme listesi",
+    "pre-launch landing pages",
+    "first 100 users",
+    "waitlist builder",
     "landing page oluşturucu",
+    "bekleme listesi",
+    "lansman bekleme listesi",
     "proje sayfası",
     "girişimci araçları",
     "lead toplama",
@@ -29,9 +32,9 @@ export const siteConfig = {
     "yapay zeka proje asistanı",
     "startup validasyon"
   ],
-  authors: [{ name: "listelee.lumiostudio.co Team", url: APP_URL }],
-  creator: "listelee.lumiostudio.co",
-  publisher: "listelee.lumiostudio.co",
+  authors: [{ name: "First100 Team", url: APP_URL }],
+  creator: "First100",
+  publisher: "First100",
   formatDetection: {
     email: false,
     address: false,
@@ -50,28 +53,28 @@ export const siteConfig = {
   },
   openGraph: {
     type: "website",
-    locale: "tr_TR",
+    locale: "en_US",
     url: APP_URL,
-    title: "listelee.lumiostudio.co - Bekleme Listeni Hızla Oluştur",
-    description: "Girişimciler için bekleme listesi platformu. Fikrini lansmandan önce doğrula, müşterilerini topla ve ürünü güvenle inşa et.",
-    siteName: "listelee.lumiostudio.co",
+    title: "First100 — Get your first 100 users before you build",
+    description: "AI waitlist pages that collect leads and measure intent. Add images & video (Pro). Launch in minutes.",
+    siteName: "First100",
     images: [
       {
         url: `${APP_URL}/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: "listelee.lumiostudio.co - AI-Powered Project Landing Page Generator",
+        alt: "First100 - AI-Powered Waitlist Landing Page Builder",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "listelee.lumiostudio.co - Bekleme Listeni Hızla Oluştur",
-    description: "Girişimciler için bekleme listesi platformu. Fikrini lansmandan önce doğrula, müşterilerini topla ve ürünü güvenle inşa et.",
+    title: "First100 — Get your first 100 users before you build",
+    description: "AI waitlist pages that collect leads and measure intent. Add images & video (Pro). Launch in minutes.",
     images: [`${APP_URL}/twitter-image.png`],
-    creator: "@listeleio",
-    site: "@listeleio",
+    creator: "@first100app",
+    site: "@first100app",
   },
   robots: {
     index: true,
@@ -90,7 +93,7 @@ export const siteConfig = {
 export const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "listelee.lumiostudio.co",
+  "name": "First100",
   "description": siteConfig.description,
   "url": APP_URL,
   "logo": `${APP_URL}/Logo.png`,
@@ -98,17 +101,17 @@ export const organizationStructuredData = {
   "founders": [
     {
       "@type": "Person",
-      "name": "listelee.lumiostudio.co Kurucu Ekibi"
+      "name": "First100 Founding Team"
     }
   ],
   "sameAs": [
-    "https://twitter.com/listeleio"
+    "https://twitter.com/first100app"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
     "url": APP_URL,
-    "availableLanguage": "Turkish"
+    "availableLanguage": ["English", "Turkish"]
   }
 }
 
@@ -116,42 +119,44 @@ export const organizationStructuredData = {
 export const softwareApplicationStructuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "listelee.lumiostudio.co",
+  "name": "First100",
   "description": siteConfig.description,
   "url": APP_URL,
   "applicationCategory": "BusinessApplication",
-  "applicationSubCategory": "Landing Page Builder",
+  "applicationSubCategory": "Waitlist & Pre-Launch Landing Pages",
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript",
   "softwareVersion": "1.0",
   "datePublished": "2025-07-27",
-  "inLanguage": "tr",
-  "availableLanguage": "Turkish",
+  "inLanguage": ["en", "tr"],
+  "availableLanguage": ["English", "Turkish"],
   "offers": {
     "@type": "Offer",
     "price": "0",
-    "priceCurrency": "TRY",
-    "description": "Ücretsiz plan mevcut, ücretli planlar yakında",
+    "priceCurrency": "USD",
+    "description": "Free plan available, paid plans available",
     "availability": "https://schema.org/InStock"
   },
   "author": {
     "@type": "Organization",
-    "name": "listelee.lumiostudio.co",
+    "name": "First100",
     "url": APP_URL
   },
   "publisher": {
     "@type": "Organization", 
-    "name": "listelee.lumiostudio.co",
+    "name": "First100",
     "url": APP_URL
   },
   "screenshot": `${APP_URL}/demo.png`,
   "featureList": [
-    "AI destekli proje oluşturma",
-    "Drag & drop editör",
-    "Müşteri lead toplama",
-    "Gerçek zamanlı analitik",
-    "Mobil uyumlu tasarım",
-    "SEO optimizasyonu"
+    "AI-powered page generation",
+    "Voice-to-project creation",
+    "Media support (images & video)",
+    "Lead capture and export",
+    "Intent analytics",
+    "Custom domain support",
+    "Mobile-responsive design",
+    "SEO optimization"
   ]
 }
 
@@ -159,13 +164,13 @@ export const softwareApplicationStructuredData = {
 export const websiteStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "listelee.lumiostudio.co",
+  "name": "First100",
   "description": siteConfig.description,
   "url": APP_URL,
-  "inLanguage": "tr",
+  "inLanguage": ["en", "tr"],
   "publisher": {
     "@type": "Organization",
-    "name": "listelee.lumiostudio.co",
+    "name": "First100",
     "url": APP_URL
   },
   "potentialAction": {
@@ -213,23 +218,23 @@ export const createPageMetadata = (
 // Specific page metadata
 export const pageMetadata = {
   pricing: createPageMetadata(
-    "Fiyatlandırma",
-    "listelee.lumiostudio.co fiyat planları. Ücretsiz başla, ihtiyacına göre büyüt. Girişimciler için uygun fiyatlı landing page çözümleri.",
+    "Pricing",
+    "First100 pricing plans. Start free, scale as you grow. Affordable waitlist solutions for entrepreneurs.",
     "/pricing"
   ),
   showcase: createPageMetadata(
-    "Proje Galerisi",
-    "listelee.lumiostudio.co ile hayata geçirilmiş başarılı proje örnekleri. İlham al, kendi projenin için fikir edin.",
+    "Showcase",
+    "Successful project examples built with First100. Get inspired, find ideas for your own project.",
     "/showcase"
   ),
   login: createPageMetadata(
-    "Giriş Yap",
-    "listelee.lumiostudio.co hesabına giriş yap. Projelerini yönet, müşteri verilerini takip et.",
+    "Sign In",
+    "Sign in to your First100 account. Manage your projects, track customer data.",
     "/login"
   ),
   onboarding: createPageMetadata(
-    "Başlangıç",
-    "listelee.lumiostudio.co'ya hoş geldin! İlk projeni oluştur ve fikrini hayata geçirmeye başla.",
+    "Get Started",
+    "Welcome to First100! Create your first project and start bringing your idea to life.",
     "/onboarding"
   ),
 } 

@@ -1,18 +1,18 @@
 ---
-title: "Landing Page Dönüşüm Oranı Düşük: Conversion Optimization Rehberi"
-slug: "landing-page-donusum-orani-dusuk-conversion-optimization"
-excerpt: "Landing page'iniz güzel görünüyor ama dönüşüm oranı düşük mü? CRO (Conversion Rate Optimization) taktikleriyle oranınızı ikiye katlayın. A/B test, psikoloji ve teknik optimizasyon yöntemleri."
-category: "Optimizasyon"
-tags: ["conversion optimization", "CRO", "landing page", "A/B test", "dönüşüm oranı", "müşteri kazanma"]
+title: "Landing Page Conversion Rate Low: Conversion Optimization Guide"
+slug: "landing-page-low-conversion-rate-cro-guide"
+excerpt: "Your landing page looks good but is your conversion rate low? Double your rate with CRO (Conversion Rate Optimization) tactics. A/B testing, psychology, and technical optimization methods."
+category: "Optimization"
+tags: ["conversion optimization", "CRO", "landing page", "A/B test", "conversion rate", "customer acquisition"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-19T10:00:00Z"
 readingTime: 11
 seo:
-  title: "Landing Page Dönüşüm Oranı Düşük - CRO Optimizasyon Rehberi"
-  description: "Landing page dönüşüm oranınız düşük mü? Bilimsel CRO yöntemleriyle oranınızı artırın. A/B test, psikoloji ve optimizasyon taktikleri burada."
-  keywords: ["dönüşüm oranı optimizasyonu", "CRO", "landing page optimizasyonu", "A/B test", "conversion rate", "müşteri kazanma"]
+  title: "Landing Page Conversion Rate Low - CRO Optimization Guide"
+  description: "Is your landing page conversion rate low? Increase your rate with scientific CRO methods. A/B testing, psychology, and optimization tactics here."
+  keywords: ["conversion rate optimization", "CRO", "landing page optimization", "A/B test", "conversion rate", "customer acquisition"]
 ---
 
 # Landing Page Dönüşüm Oranı Düşük: Conversion Optimization Rehberi

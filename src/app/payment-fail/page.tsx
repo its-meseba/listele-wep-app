@@ -55,20 +55,20 @@ function PaymentFailContent() {
             }
         } catch (error) {
             console.error('Payment retry error:', error);
-            toast.error('Ödeme sistemi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.');
+            toast.error('Payment system is temporarily unavailable. Please try again later.');
         }
     };
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen text-center">
             <XCircle className="w-16 h-16 text-red-500 mb-4" />
-            <h1 className="text-2xl font-bold mb-2">Ödeme Başarısız Oldu</h1>
-            <p className="text-gray-600 mb-8">Ödemenizi işleme alamadık. Lütfen tekrar deneyin.</p>
+            <h1 className="text-2xl font-bold mb-2">Payment Failed</h1>
+            <p className="text-gray-600 mb-8">We couldn't process your payment. Please try again.</p>
             <div className="flex gap-4">
                 <Link href="/pricing">
-                    <Button variant="outline">Fiyatlandırmaya Geri Dön</Button>
+                    <Button variant="outline">Back to Pricing</Button>
                 </Link>
-                <Button onClick={handleTryAgain}>Tekrar Dene</Button>
+                <Button onClick={handleTryAgain}>Try Again</Button>
             </div>
         </div>
     );
@@ -80,7 +80,7 @@ export default function PaymentFailPage() {
             <div className="flex flex-col items-center justify-center min-h-screen text-center">
                 <div className="animate-pulse">
                     <XCircle className="w-16 h-16 text-red-500 mb-4" />
-                    <h1 className="text-2xl font-bold mb-2">Yükleniyor...</h1>
+                    <h1 className="text-2xl font-bold mb-2">Loading...</h1>
                 </div>
             </div>
         }>

@@ -21,11 +21,11 @@ interface VoiceAIFounderModalProps {
 }
 
 const processingSteps = [
-    "Fikrin analiz ediliyor...",
-    "Pazar araştırması yapılıyor...",
-    "Marka kimliği oluşturuluyor...",
-    "Tasarım elementleri seçiliyor...",
-    "Son sihirli dokunuşlar yapılıyor..."
+    "Analyzing your idea...",
+    "Researching the market...",
+    "Creating brand identity...",
+    "Selecting design elements...",
+    "Adding final touches..."
 ];
 
 export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderModalProps) {
@@ -50,13 +50,16 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
     }, []);
 
     const currentPlan = userProfile ? getPlanBySlug(userProfile.plan) : null;
-    const canCreateProject = currentPlan && (currentPlan.name === "Sınırsız" || (userProfile && userProfile.projectsCount < (currentPlan.features.find(f => f.includes("Proje"))?.split(" ")[0] ? parseInt(currentPlan.features.find(f => f.includes("Proje"))?.split(" ")[0] as string) : 0)));
-    const voiceCredits = currentPlan ? (currentPlan.features.find(f => f.includes("Sesle Proje Oluşturma"))?.split(" ")[0] ? parseInt(currentPlan.features.find(f => f.includes("Sesle Proje Oluşturma"))?.split(" ")[0] as string) : 0) : 0;
-    const hasVoiceCredits = currentPlan && voiceCredits > 0 && userProfile && userProfile.voiceCreditsUsed < voiceCredits;
+    const maxProjectsFeature = currentPlan?.features.find(f => f.includes("page") || f.includes("Page"));
+    const maxProjects = maxProjectsFeature ? (maxProjectsFeature.toLowerCase().includes("unlimited") ? Infinity : parseInt(maxProjectsFeature.split(" ")[0]) || 1) : (currentPlan?.slug === 'free' ? 1 : Infinity);
+    const canCreateProject = currentPlan && (maxProjects === Infinity || (userProfile && userProfile.projectsCount < maxProjects));
+    const voiceCreditsFeature = currentPlan?.features.find(f => f.includes("Voice") || f.includes("voice"));
+    const voiceCredits = voiceCreditsFeature ? (voiceCreditsFeature.toLowerCase().includes("unlimited") ? Infinity : parseInt(voiceCreditsFeature.split(" ")[0]) || 0) : (currentPlan?.slug === 'free' ? 0 : Infinity);
+    const hasVoiceCredits = currentPlan && voiceCredits !== 0 && userProfile && userProfile.voiceCreditsUsed < voiceCredits;
 
     const handleStartRecording = async () => {
         if (!hasVoiceCredits) {
-            toast.error("Sesle proje oluşturma krediniz bitti veya planınız desteklemiyor.");
+            toast.error("Your voice-to-project credits have run out or your plan doesn't support this feature.");
             return;
         }
         try {
@@ -69,7 +72,7 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
             recorder.start();
             setStep('recording');
         } catch (err) {
-            toast.error("Mikrofon erişimi reddedildi.");
+            toast.error("Microphone access denied.");
         }
     };
 
@@ -126,7 +129,7 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
 
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.error || "Bir hata oluştu.");
+                throw new Error(errorData.error || "An error occurred.");
             }
             const config = await response.json();
             
@@ -141,7 +144,7 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
             router.push(`/dashboard/editor/${newProjectId}`);
 
         } catch (error) {
-            toast.error("Proje oluşturulamadı.");
+            toast.error("Failed to create project.");
             setStep('idle');
         } finally {
             setTextPrompt("");
@@ -167,7 +170,7 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
             
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.error || "Bir hata oluştu.");
+                throw new Error(errorData.error || "An error occurred.");
             }
             const config = await response.json();
             
@@ -182,7 +185,7 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
             router.push(`/dashboard/editor/${newProjectId}`);
 
         } catch (error) {
-            toast.error("Proje oluşturulamadı.");
+            toast.error("Failed to create project.");
             setStep('idle');
         } finally {
             setAudioChunks([]);
@@ -196,22 +199,22 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
                 return (
                     <>
                         <Zap className="h-12 w-12 mx-auto text-yellow-400" />
-                        <DialogTitle className="text-2xl font-bold">Fikrini Söyle, Gerçeğe Dönüşsün</DialogTitle>
-                        <DialogDescription>Sadece bir ses kaydıyla projenizin ilk adımını atın.</DialogDescription>
+                        <DialogTitle className="text-2xl font-bold">Tell Us Your Idea, Make It Real</DialogTitle>
+                        <DialogDescription>Take the first step of your project with just a voice recording.</DialogDescription>
                         <Button onClick={handleStartRecording} className="w-full mt-4" disabled={!hasVoiceCredits}>
-                            <Mic className="mr-2 h-4 w-4" /> Kayda Başla
+                            <Mic className="mr-2 h-4 w-4" /> Start Recording
                         </Button>
                         {!hasVoiceCredits && user && (
                              <div className="mt-2 text-sm text-yellow-600 bg-yellow-50 border border-yellow-200 rounded-lg p-3 flex items-center gap-2">
                                 <Info className="h-5 w-5" />
                                 <span>
-                                    Sesle proje oluşturma hakkınız kalmadı.
-                                    <Link href="/pricing" className="font-semibold underline ml-1">Planınızı yükseltin</Link>.
+                                    You've run out of voice-to-project credits.
+                                    <Link href="/pricing" className="font-semibold underline ml-1">Upgrade your plan</Link>.
                                 </span>
                             </div>
                         )}
                         <Button onClick={() => setStep('text_input')} variant="link" className="mt-2">
-                            Veya metin olarak yaz
+                            Or type it as text
                         </Button>
                     </>
                 );
@@ -219,27 +222,27 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
                 return (
                     <>
                         <Type className="h-12 w-12 mx-auto text-blue-500" />
-                        <DialogTitle className="text-2xl font-bold">Harika Fikrin Nedir?</DialogTitle>
-                        <DialogDescription>Proje fikrini aşağıya yaz, yapay zeka senin için bir başlangıç yapsın.</DialogDescription>
+                        <DialogTitle className="text-2xl font-bold">What's Your Great Idea?</DialogTitle>
+                        <DialogDescription>Write your project idea below, and AI will create a starting point for you.</DialogDescription>
                         <textarea 
                             className="w-full mt-4 p-2 border rounded"
                             rows={4}
                             value={textPrompt}
                             onChange={(e) => setTextPrompt(e.target.value)}
-                            placeholder="Örn: Yerel sanatçıları alıcılarla buluşturan bir platform."
+                            placeholder="E.g.: A platform connecting local artists with buyers."
                             disabled={!canCreateProject}
                         />
                          {!canCreateProject && user && (
                              <div className="mt-2 text-sm text-yellow-600 bg-yellow-50 border border-yellow-200 rounded-lg p-3 flex items-center gap-2">
                                 <Info className="h-5 w-5" />
                                 <span>
-                                    Proje oluşturma limitinize ulaştınız.
-                                    <Link href="/pricing" className="font-semibold underline ml-1">Planınızı yükseltin</Link>.
+                                    You've reached your project creation limit.
+                                    <Link href="/pricing" className="font-semibold underline ml-1">Upgrade your plan</Link>.
                                 </span>
                             </div>
                         )}
                         <Button onClick={() => setStep('processing')} disabled={!textPrompt || !canCreateProject} className="w-full mt-4">
-                            Projemi Oluştur
+                            Create My Project
                         </Button>
                     </>
                 );
@@ -250,10 +253,10 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
                             <div className="absolute inset-0 bg-red-500 rounded-full animate-pulse"></div>
                             <Mic className="relative h-12 w-12 mx-auto text-white top-2" />
                         </div>
-                        <DialogTitle>Seni Dinliyoruz...</DialogTitle>
-                        <DialogDescription>Fikrini anlat, bitince kaydı durdur.</DialogDescription>
+                        <DialogTitle>We're Listening...</DialogTitle>
+                        <DialogDescription>Tell us your idea, then stop the recording when done.</DialogDescription>
                         <Button onClick={handleStopRecording} variant="destructive" className="w-full mt-4">
-                            <Square className="mr-2 h-4 w-4" /> Kaydı Durdur
+                            <Square className="mr-2 h-4 w-4" /> Stop Recording
                         </Button>
                     </>
                 );
@@ -262,7 +265,7 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
                 return (
                     <>
                         <Zap className="h-12 w-12 mx-auto text-yellow-400 animate-spin" />
-                        <DialogTitle>Sihir Başlıyor...</DialogTitle>
+                        <DialogTitle>Magic Starting...</DialogTitle>
                         <DialogDescription>
                             {processingSteps[processingStep]}
                         </DialogDescription>
@@ -271,8 +274,8 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
             case 'auth':
                 return(
                     <>
-                        <DialogTitle>Neredeyse Tamam!</DialogTitle>
-                        <DialogDescription>Projeni kaydetmek için giriş yap veya kayıt ol.</DialogDescription>
+                        <DialogTitle>Almost Done!</DialogTitle>
+                        <DialogDescription>Sign in or sign up to save your project.</DialogDescription>
                         <AuthForm onSuccess={() => setStep('creating')} />
                     </>
                 );
@@ -280,8 +283,8 @@ export default function VoiceAIFounderModal({ isOpen, onClose }: VoiceAIFounderM
                  return (
                     <>
                         <PartyPopper className="h-12 w-12 mx-auto text-green-500" />
-                        <DialogTitle>Projen Hazır!</DialogTitle>
-                        <DialogDescription>Seni editöre yönlendiriyoruz...</DialogDescription>
+                        <DialogTitle>Your Project is Ready!</DialogTitle>
+                        <DialogDescription>Redirecting you to the editor...</DialogDescription>
                     </>
                 );
         }

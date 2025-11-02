@@ -1,6 +1,6 @@
-# listelee.lumiostudio.co - Fikrini Listelee, İşini Test Et
+# first100.lumiostudio.co - Fikrini Listelee, İşini Test Et
 
-![listelee.lumiostudio.co](/public/opengraph-image.png)
+![first100.lumiostudio.co](/public/opengraph-image.png)
 
 <p>
   Türkiye’deki girişimciler için dakikalar içinde bekleme listesi sayfası kurup fikrini gerçek kullanıcılarla test etmeyi sağlayan no-code platform.

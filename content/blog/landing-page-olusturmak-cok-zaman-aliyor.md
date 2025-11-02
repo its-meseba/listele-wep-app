@@ -1,18 +1,18 @@
 ---
-title: "Landing Page Oluşturmak Çok Zaman Alıyor: Girişimcilerin En Büyük Zaman Kaybı"
-slug: "landing-page-olusturmak-cok-zaman-aliyor"
-excerpt: "Landing page oluşturmak için haftalar harcayan girişimcilerin hikayesi. Kodlama, tasarım ve optimizasyon süreçlerini kısaltmanın yolları. Listelee.io ile dakikalar içinde profesyonel landing page."
-category: "Verimlilik"
-tags: ["landing page", "zaman yönetimi", "girişimcilik", "verimlilik", "no-code", "startup"]
+title: "Creating Landing Pages Takes Too Long: Entrepreneurs' Biggest Time Waste"
+slug: "creating-landing-pages-takes-too-long"
+excerpt: "The story of entrepreneurs who spend weeks creating landing pages. Ways to shorten coding, design and optimization processes. Professional landing pages in minutes with Listelee.io."
+category: "Productivity"
+tags: ["landing page", "time management", "entrepreneurship", "productivity", "no-code", "startup"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-15T10:00:00Z"
 readingTime: 7
 seo:
-  title: "Landing Page Oluşturmak Çok Zaman Alıyor - Çözüm: Listelee.io"
-  description: "Landing page oluşturmak haftalarınızı alıyorsa doğru yerdesiniz. Kodlama, tasarım ve optimizasyon süreçlerini dakikalar içinde tamamlayın. Girişimcilerin zaman yönetimi rehberi."
-  keywords: ["landing page oluşturma", "zaman tasarrufu", "girişimci verimliliği", "no-code araçlar", "startup hızlandırma", "landing page hız"]
+  title: "Creating Landing Pages Takes Too Long - Solution: Listelee.io"
+  description: "If creating landing pages takes your weeks, you're in the right place. Complete coding, design and optimization processes in minutes. Entrepreneurs' time management guide."
+  keywords: ["landing page creation", "time savings", "entrepreneur productivity", "no-code tools", "startup acceleration", "landing page speed"]
 ---
 
 # Landing Page Oluşturmak Çok Zaman Alıyor: Girişimcilerin En Büyük Zaman Kaybı

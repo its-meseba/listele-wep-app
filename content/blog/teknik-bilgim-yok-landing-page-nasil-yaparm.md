@@ -1,18 +1,18 @@
 ---
-title: "Teknik Bilgim Yok, Landing Page Nasıl Yapacağım? Kodlama Bilmeden Profesyonel Site Oluşturma Rehberi"
-slug: "teknik-bilgim-yok-landing-page-nasil-yaparim"
-excerpt: "Kodlama bilmeden landing page yapmak mümkün mü? Evet! No-code araçlarla profesyonel web sitesi oluşturmanın tüm detayları. Teknik bilgi gerektirmeyen çözümler ve adım adım rehber."
-category: "Teknik"
-tags: ["no-code", "landing page", "kodlama bilmeden", "web sitesi", "girişimcilik", "teknoloji"]
+title: "I Have No Technical Skills, How Will I Make a Landing Page? Professional Website Creation Guide Without Coding"
+slug: "no-technical-skills-how-to-make-landing-page"
+excerpt: "Is it possible to create a landing page without coding? Yes! All the details of creating a professional website with no-code tools. Solutions that don't require technical knowledge and step-by-step guide."
+category: "Technical"
+tags: ["no-code", "landing page", "without coding", "website", "entrepreneurship", "technology"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-16T10:00:00Z"
 readingTime: 8
 seo:
-  title: "Kodlama Bilmeden Landing Page Yapma - No-Code Web Sitesi Rehberi"
-  description: "Teknik bilginiz yok diye landing page yapamayacağınızı düşünüyorsanız yanılıyorsunuz. Kodlama bilmeden profesyonel web sitesi oluşturmanın tüm yolları burada."
-  keywords: ["kodlama bilmeden web sitesi", "no-code landing page", "teknik bilgi olmadan", "girişimci web sitesi", "kolay web tasarımı", "no-code araçlar"]
+  title: "Creating Landing Pages Without Coding - No-Code Website Guide"
+  description: "If you think you can't make a landing page because you have no technical skills, you're wrong. All the ways to create a professional website without coding are here."
+  keywords: ["website without coding", "no-code landing page", "without technical knowledge", "entrepreneur website", "easy web design", "no-code tools"]
 ---
 
 # Teknik Bilgim Yok, Landing Page Nasıl Yapacağım? Kodlama Bilmeden Profesyonel Site Oluşturma Rehberi

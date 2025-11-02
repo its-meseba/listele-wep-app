@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
   title: {
     default: siteConfig.openGraph.title,
-    template: '%s | listelee.lumiostudio.co'
+    template: '%s | First100'
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'listelee.lumiostudio.co - AI-Powered Project Landing Page Generator',
+        alt: 'First100 - AI-Powered Waitlist Landing Page Builder',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   category: 'business',
   classification: 'Business Application',
-  applicationName: 'listelee.lumiostudio.co',
+  applicationName: 'First100',
   referrer: 'origin-when-cross-origin',
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || '',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'listelee.lumiostudio.co',
+    'apple-mobile-web-app-title': 'First100',
     'mobile-web-app-capable': 'yes',
     'msapplication-TileColor': '#3b82f6',
     'theme-color': '#3b82f6',

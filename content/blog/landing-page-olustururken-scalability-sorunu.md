@@ -1,18 +1,18 @@
 ---
-title: "Landing Page Oluştururken Scalability Sorunu: Ölçeklenebilir Büyüme Rehberi"
-slug: "landing-page-olustururken-scalability-sorunu"
-excerpt: "Landing page'iniz büyüyor ama altyapınız yetişmiyor mu? Scalability sorunlarının çözümü: Sistem tasarımı, otomasyon ve büyüme odaklı mimari. Binlerce sayfayı yönetmek için olmazsa olmaz stratejiler."
-category: "Ölçeklenebilirlik"
-tags: ["scalability", "landing page yönetimi", "büyüme", "otomasyon", "sistem tasarımı", "performance"]
+title: "Scalability Issues When Creating Landing Pages: Scalable Growth Guide"
+slug: "scalability-issues-creating-landing-pages"
+excerpt: "Your landing page is growing but your infrastructure can't keep up? Solution to scalability problems: System design, automation, and growth-oriented architecture. Essential strategies for managing thousands of pages."
+category: "Scalability"
+tags: ["scalability", "landing page management", "growth", "automation", "system design", "performance"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-24T10:00:00Z"
 readingTime: 11
 seo:
-  title: "Landing Page Scalability Sorunu - Ölçeklenebilir Büyüme Rehberi"
-  description: "Landing page'leriniz büyüyor ama altyapınız yetişmiyor mu? Scalability sorunlarının çözümü: Otomasyon, sistem tasarımı ve büyüme odaklı stratejiler."
-  keywords: ["landing page scalability", "ölçeklenebilirlik", "büyüme yönetimi", "otomasyon", "sistem tasarımı", "performance scaling"]
+  title: "Landing Page Scalability Issues - Scalable Growth Guide"
+  description: "Are your landing pages growing but your infrastructure can't keep up? Solution to scalability problems: Automation, system design, and growth-oriented strategies."
+  keywords: ["landing page scalability", "scalability", "growth management", "automation", "system design", "performance scaling"]
 ---
 
 # Landing Page Oluştururken Scalability Sorunu: Ölçeklenebilir Büyüme Rehberi

@@ -1,18 +1,18 @@
 ---
-title: "Müşteri Adayı Toplayamıyorum: Lead Collection Sorunu ve Çözümleri"
-slug: "musteri-adayi-toplayamiyorum-lead-collection-sorunu"
-excerpt: "Landing page'iniz var ama müşteri adayı gelmiyor mu? Lead collection sorunlarının temel nedenleri ve profesyonel çözümleri. Dönüşüm oranınızı artırmanın tüm taktikleri burada."
-category: "Pazarlama"
-tags: ["lead collection", "müşteri adayı", "dönüşüm optimizasyonu", "landing page", "pazarlama", "CRM"]
+title: "I Can't Collect Leads: Lead Collection Problems and Solutions"
+slug: "cant-collect-leads-lead-collection-problems-solutions"
+excerpt: "You have a landing page but leads aren't coming? Fundamental reasons for lead collection problems and professional solutions. All tactics to increase your conversion rate are here."
+category: "Marketing"
+tags: ["lead collection", "leads", "conversion optimization", "landing page", "marketing", "CRM"]
 author:
   name: "Listelee.io"
   email: "info@listelee.io"
 publishedAt: "2024-12-17T10:00:00Z"
 readingTime: 9
 seo:
-  title: "Müşteri Adayı Toplayamıyorum - Lead Collection Sorunları ve Çözümleri"
-  description: "Landing page'iniz olmasına rağmen müşteri adayı toplayamıyor musunuz? Lead generation sorunlarının nedenleri ve profesyonel çözümleri burada. Dönüşüm oranınızı artırın."
-  keywords: ["müşteri adayı toplama", "lead generation", "dönüşüm optimizasyonu", "landing page", "müşteri kazanma", "CRM entegrasyonu"]
+  title: "I Can't Collect Leads - Lead Collection Problems and Solutions"
+  description: "Can't collect leads despite having a landing page? Reasons for lead generation problems and professional solutions here. Increase your conversion rate."
+  keywords: ["lead collection", "lead generation", "conversion optimization", "landing page", "customer acquisition", "CRM integration"]
 ---
 
 # Müşteri Adayı Toplayamıyorum: Lead Collection Sorunu ve Çözümleri

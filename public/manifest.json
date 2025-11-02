@@ -1,7 +1,7 @@
 {
-  "name": "listelee.lumiostudio.co - Girişiminizi Hızla Hayata Geçirin",
-  "short_name": "listelee.lumiostudio.co",
-  "description": "Fikirlerini hızla hayata geçir. Dakikalar içinde projelerini oluştur, müşteri topla ve büyü. Fikrini herkese kanitla!",
+  "name": "First100 - Get your first 100 users before you build",
+  "short_name": "First100",
+  "description": "AI waitlist pages that collect leads and measure intent. Add images & video (Pro). Launch in minutes.",
   "icons": [
     {
       "src": "/Logo.png",

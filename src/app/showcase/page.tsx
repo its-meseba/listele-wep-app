@@ -13,17 +13,17 @@ import { trackFeatureUsage } from "~/lib/analytics";
 import Link from "next/link";
 
 const PROJECT_CATEGORIES = [
-  { value: "all", label: "Tüm Projeler" },
-  { value: "e-commerce", label: "E-Ticaret" },
+  { value: "all", label: "All Projects" },
+  { value: "e-commerce", label: "E-Commerce" },
   { value: "saas", label: "SaaS" },
-  { value: "local-business", label: "Yerel İşletme" },
-  { value: "consulting", label: "Danışmanlık" },
-  { value: "education", label: "Eğitim" },
-  { value: "health", label: "Sağlık" },
-  { value: "technology", label: "Teknoloji" },
-  { value: "food", label: "Yemek & İçecek" },
-  { value: "fashion", label: "Moda" },
-  { value: "travel", label: "Seyahat" }
+  { value: "local-business", label: "Local Business" },
+  { value: "consulting", label: "Consulting" },
+  { value: "education", label: "Education" },
+  { value: "health", label: "Health" },
+  { value: "technology", label: "Technology" },
+  { value: "food", label: "Food & Beverage" },
+  { value: "fashion", label: "Fashion" },
+  { value: "travel", label: "Travel" }
 ];
 
 interface ProjectStats {
@@ -131,13 +131,13 @@ export default function ShowcasePage() {
             <div className="flex items-center justify-center gap-2 mb-4">
               <Sparkles className="w-8 h-8 text-[#D8FF00]" />
               <h1 className="text-4xl font-bold text-black dark:text-white">
-                Proje Galerisi
+                Project Gallery
               </h1>
               <Sparkles className="w-8 h-8 text-[#D8FF00]" />
             </div>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              listelee.lumiostudio.co ile hayata geçirilmiş başarılı projelerden ilham alın. 
-              Her biri gerçek girişimcilerin hikayesi ve müşteri toplama başarısı!
+              Get inspired by successful projects built with First100. 
+              Each one is a real entrepreneur's story and customer acquisition success!
             </p>
           </div>
         </div>
@@ -150,8 +150,8 @@ export default function ShowcasePage() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-6">
               <Award className="w-6 h-6 text-[#D8FF00]" />
-              <h2 className="text-2xl font-bold text-black dark:text-white">Öne Çıkan Projeler</h2>
-              <Badge variant="outline" className="border-[#D8FF00] text-black dark:text-white bg-[#D8FF00] dark:bg-[#D8FF00]">Editör Seçimi</Badge>
+              <h2 className="text-2xl font-bold text-black dark:text-white">Featured Projects</h2>
+              <Badge variant="outline" className="border-[#D8FF00] text-black dark:text-white bg-[#D8FF00] dark:bg-[#D8FF00]">Editor's Choice</Badge>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,14 +161,14 @@ export default function ShowcasePage() {
                     <div className="absolute top-4 right-4">
                       <Badge variant="outline" className="border-[#D8FF00] text-black dark:text-white bg-[#D8FF00] dark:bg-[#D8FF00]">
                         <Award className="w-3 h-3 mr-1" />
-                        Öne Çıkan
+                        Featured
                       </Badge>
                     </div>
                     <CardTitle className="text-lg group-hover:text-[#D8FF00] transition-colors text-black dark:text-white">
                       {project.name}
                     </CardTitle>
                     <CardDescription className="line-clamp-2 text-gray-600 dark:text-gray-400">
-                      {project.config?.subtitle || project.config?.description || "Harika bir proje"}
+                      {project.config?.subtitle || project.config?.description || "A great project"}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -179,19 +179,19 @@ export default function ShowcasePage() {
                           <div className="text-lg font-bold text-black dark:text-white">
                             {formatNumber(project.stats?.totalSignups || 0)}
                           </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Kayıt</div>
+                          <div className="text-xs text-gray-500 dark:text-gray-400">Signups</div>
                         </div>
                         <div>
                           <div className="text-lg font-bold text-black dark:text-white">
                             {formatNumber(project.stats?.totalVisits || 0)}
                           </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Ziyaret</div>
+                          <div className="text-xs text-gray-500 dark:text-gray-400">Visits</div>
                         </div>
                         <div>
                           <div className="text-lg font-bold text-black dark:text-white">
                             {(project.stats?.conversionRate || 0).toFixed(1)}%
                           </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">Dönüşüm</div>
+                          <div className="text-xs text-gray-500 dark:text-gray-400">Conversion</div>
                         </div>
                       </div>
 
@@ -208,7 +208,7 @@ export default function ShowcasePage() {
                         className="w-full bg-[#D8FF00] hover:bg-[#B8E000] text-black group-hover:shadow-lg transition-all"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Projeyi İncele
+                        View Project
                       </Button>
                     </div>
                   </CardContent>
@@ -226,7 +226,7 @@ export default function ShowcasePage() {
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
                   <Input
-                    placeholder="Proje adı, açıklama veya içerik ara..."
+                    placeholder="Search project name, description, or content..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="pl-10 border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-black dark:text-white focus:ring-[#D8FF00] focus:border-[#D8FF00]"
@@ -246,7 +246,7 @@ export default function ShowcasePage() {
                       backgroundSize: '1.5em 1.5em'
                     }}
                   >
-                    <option value="all" className="font-medium">Tüm Kategoriler</option>
+                    <option value="all" className="font-medium">All Categories</option>
                     {PROJECT_CATEGORIES.filter(cat => cat.value !== "all").map((category) => (
                       <option key={category.value} value={category.value} className="font-medium">
                         {category.label}
@@ -269,7 +269,7 @@ export default function ShowcasePage() {
                     : "border-gray-200 dark:border-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700"
                   }
                 >
-                  Tüm Projeler
+                  All Projects
                 </Button>
                 {PROJECT_CATEGORIES.filter(cat => cat.value !== "all").map((category) => (
                   <div key={category.value} className="flex items-center gap-1">
@@ -294,10 +294,10 @@ export default function ShowcasePage() {
               {/* SEO Category Links Section */}
               <div className="mt-6 p-4 bg-gray-50 dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700">
                 <h4 className="text-sm font-semibold text-black dark:text-white mb-3">
-                  🎯 Kategoriye Özel Sayfalar
+                  🎯 Category-Specific Pages
                 </h4>
                 <p className="text-xs text-gray-700 dark:text-gray-300 mb-3">
-                  Her kategori için özel hazırlanmış sayfaları keşfet ve daha detaylı proje örnekleri incele:
+                  Discover specially prepared pages for each category and explore more detailed project examples:
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
                   {PROJECT_CATEGORIES.filter(cat => cat.value !== "all").map((category) => (
@@ -348,7 +348,7 @@ export default function ShowcasePage() {
                       {project.name}
                     </CardTitle>
                     <CardDescription className="line-clamp-2 text-sm text-gray-600 dark:text-gray-400">
-                      {project.config?.subtitle || project.config?.description || "Harika bir proje"}
+                      {project.config?.subtitle || project.config?.description || "A great project"}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -380,7 +380,7 @@ export default function ShowcasePage() {
                         className="w-full border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700"
                       >
                         <ExternalLink className="w-3 h-3 mr-2" />
-                        İncele
+                        View
                       </Button>
                     </div>
                   </CardContent>
@@ -394,21 +394,21 @@ export default function ShowcasePage() {
         <section className="mt-16 text-center">
           <div className="bg-[#D8FF00] rounded-xl p-8 text-black">
             <h3 className="text-2xl font-bold mb-4">
-              Senin Projen de Burada Olabilir! 🚀
+              Your Project Could Be Here Too! 🚀
             </h3>
             <p className="text-black/80 mb-6 max-w-2xl mx-auto">
-              listelee.lumiostudio.co ile kendi landing page'ini oluştur, müşteri topla ve başarı hikayenin binlerce kişiye ilham versin.
+              Create your own landing page with First100, collect customers, and let your success story inspire thousands.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/onboarding">
                 <Button size="lg" className="bg-white text-black hover:bg-gray-100 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
                   <Sparkles className="w-5 h-5 mr-2" />
-                  Hemen Başla - Ücretsiz
+                  Get Started - Free
                 </Button>
               </Link>
               <Link href="/pricing">
                 <Button size="lg" variant="outline" className="border-black text-black hover:bg-black/10">
-                  Fiyatları İncele
+                  View Pricing
                 </Button>
               </Link>
             </div>

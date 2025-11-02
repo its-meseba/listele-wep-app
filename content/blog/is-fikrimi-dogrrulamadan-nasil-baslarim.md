@@ -1,18 +1,18 @@
 ---
-title: "İş Fikrimi Doğrulamadan Nasıl Başlarım? Proje Validasyonu Rehberi"
-slug: "is-fikrimi-dogrrulamadan-nasil-baslarim"
-excerpt: "İş fikriniz var ama başlamadan önce doğrulamak mı istiyorsunuz? Zaman ve kaynak israfını önlemenin yolu: Bilimsel validasyon yöntemleri. MVP oluşturmadan önce müşteri geri bildirimi alma taktikleri."
-category: "Girişimcilik"
-tags: ["iş fikri doğrulama", "proje validasyonu", "müşteri geri bildirimi", "MVP", "startup", "risk azaltma"]
+title: "How Do I Start Without Validating My Business Idea? Project Validation Guide"
+slug: "how-to-start-without-validating-business-idea"
+excerpt: "You have a business idea but want to validate it before starting? The way to prevent wasting time and resources: Scientific validation methods. Tactics for getting customer feedback before creating MVP."
+category: "Entrepreneurship"
+tags: ["business idea validation", "project validation", "customer feedback", "MVP", "startup", "risk reduction"]
 author:
   name: "Listelee.io"
-  email: "info/validasyon"
+  email: "info/validation"
 publishedAt: "2024-12-18T10:00:00Z"
 readingTime: 10
 seo:
-  title: "İş Fikri Doğrulama - Proje Validasyonu Rehberi 2024"
-  description: "İş fikrinizi doğrulamadan başlamayın! Bilimsel yöntemlerle riski minimize edin. Müşteri geri bildirimi, pazar araştırması ve validasyon taktikleri."
-  keywords: ["iş fikri doğrulama", "proje validasyonu", "müşteri geri bildirimi", "MVP geliştirme", "startup riski", "pazar araştırması"]
+  title: "Business Idea Validation - Project Validation Guide 2024"
+  description: "Don't start without validating your business idea! Minimize risk with scientific methods. Customer feedback, market research, and validation tactics."
+  keywords: ["business idea validation", "project validation", "customer feedback", "MVP development", "startup risk", "market research"]
 ---
 
 # İş Fikrimi Doğrulamadan Nasıl Başlarım? Proje Validasyonu Rehberi

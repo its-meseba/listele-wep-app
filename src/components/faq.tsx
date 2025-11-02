@@ -13,8 +13,7 @@ export default function Faq() {
 					Frequently Asked Questions
 				</h2>
 				<p className="sm:text-base text-sm text-muted-foreground text-center">
-					Everything you need to know about the template. Find answers to common
-					questions.
+					Everything you need to know about First100. Find answers to common questions.
 				</p>
 			</div>
 			<div className="w-full max-w-lg">
@@ -25,35 +24,34 @@ export default function Faq() {
 				>
 					<AccordionItem value="item-1">
 						<AccordionTrigger className="hover:no-underline">
-							What's included in this template?
+							Can I export my list?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							This template is a comprehensive Next.js 15 starter kit designed
-							to help you build your next project quickly and efficiently. It
-							includes a range of features and components that you can use to
-							get started, including a responsive design, a dark mode toggle,
-							and a form component.
+							Yes, CSV anytime. Export your leads at any time in CSV format. Your data is always yours.
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="item-2">
 						<AccordionTrigger className="hover:no-underline">
-							How do I get started with this template?
+							Do I need code?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							To get started with this template, you can clone the repository
-							and install the dependencies using npm or yarn. Once you have the
-							dependencies installed, you can start the development server using
-							npm run dev or yarn dev.
+							No. First100 is a no-code solution. You can create your waitlist page in minutes without any coding knowledge.
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="item-3">
 						<AccordionTrigger className="hover:no-underline">
-							How do I customize the template to my needs?
+							Can I upload a video?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							You can customize the template to your needs by modifying the
-							components and pages in the src directory. You can also add your
-							own components and pages to the src directory.
+							Yes, on Pro. Pro plan includes support for uploading images and a teaser video to your waitlist page.
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value="item-4">
+						<AccordionTrigger className="hover:no-underline">
+							What payment methods do you accept?
+						</AccordionTrigger>
+						<AccordionContent className="text-muted-foreground">
+							We use Stripe/Paddle for payments. You can change your payment method anytime from your account settings.
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>
